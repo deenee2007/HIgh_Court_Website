@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: gombe-high-court
+    runtime: node
+    plan: starter
+    region: frankfurt
+    buildCommand: npm install --omit=dev
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "22"
+      - key: MONGODB_URI
+        sync: false
+      - key: CLOUDINARY_URL
+        sync: false
+      - key: SITE_URL
+        sync: false
+      - key: SETUP_TOKEN
+        generateValue: true

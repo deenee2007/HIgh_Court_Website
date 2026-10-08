@@ -1,0 +1,151 @@
+'use strict';
+// Display styles a section can use. Each style suggests a starting set of fields,
+// which administrators can change freely. Fields with the keys listed in "uses"
+// are placed in specific spots of the design; any other field is still shown
+// on the detail page under "Additional information".
+
+const f = (key, label, type, extra = {}) => ({ key, label, type, required: false, help: '', options: [], ...extra });
+
+const LAYOUTS = {
+  profiles: {
+    label: 'Profiles (people with photos)',
+    description: 'Photo cards that open a full profile page. Used for the Honourable Judges.',
+    titleLabel: 'Full name',
+    detail: true,
+    uses: ['photo', 'designation', 'subtitle', 'bio', 'education', 'career', 'more'],
+    fields: [
+      f('photo', 'Photo', 'image'),
+      f('designation', 'Title shown on the card', 'text', { help: 'For example: Honourable Judge' }),
+      f('subtitle', 'Subtitle on the profile page', 'text'),
+      f('position', 'Current designation', 'text'),
+      f('appointed', 'Date of appointment', 'text'),
+      f('origin', 'LGA of origin', 'text'),
+      f('bio', 'Professional profile', 'richtext'),
+      f('education', 'Educational background', 'cards'),
+      f('career', 'Career milestones', 'cards'),
+      f('more', 'Additional content', 'richtext'),
+    ],
+  },
+  departments: {
+    label: 'Departments (icon cards with a full page)',
+    description: 'Icon cards that open a page with an overview, the head of department and responsibilities. Used for Directorates.',
+    titleLabel: 'Name',
+    detail: true,
+    uses: ['icon', 'summary', 'heading', 'tagline', 'banner', 'overview', 'headName', 'headTitle', 'headPhoto', 'headQuote', 'email', 'office', 'responsibilitiesTitle', 'responsibilities', 'more'],
+    fields: [
+      f('icon', 'Icon', 'text', { help: 'Font Awesome icon name, for example fas fa-gavel' }),
+      f('summary', 'Short description (shown on the card)', 'textarea'),
+      f('heading', 'Page heading', 'text', { help: 'Leave empty to use the name' }),
+      f('tagline', 'Tagline under the heading', 'text'),
+      f('banner', 'Banner background image', 'image'),
+      f('overview', 'Overview', 'richtext'),
+      f('headName', 'Head of department: name', 'text'),
+      f('headTitle', 'Head of department: title', 'text'),
+      f('headPhoto', 'Head of department: photo', 'image'),
+      f('headQuote', 'Head of department: quote', 'textarea'),
+      f('email', 'Email', 'email'),
+      f('office', 'Office location', 'text'),
+      f('responsibilitiesTitle', 'Heading for the responsibilities', 'text'),
+      f('responsibilities', 'Responsibilities', 'cards'),
+      f('more', 'Additional content', 'richtext'),
+    ],
+  },
+  articles: {
+    label: 'Articles (news and announcements)',
+    description: 'Dated stories with a picture, listed newest first.',
+    titleLabel: 'Headline',
+    detail: true,
+    sort: 'date',
+    uses: ['image', 'category', 'date', 'summary', 'body', 'attachment'],
+    fields: [
+      f('date', 'Date', 'date', { required: true }),
+      f('category', 'Category', 'text', { help: 'For example: Announcement, Event, Recruitment' }),
+      f('image', 'Picture', 'image'),
+      f('summary', 'Summary', 'textarea'),
+      f('body', 'Full story', 'richtext'),
+      f('attachment', 'Attachment', 'file'),
+    ],
+  },
+  documents: {
+    label: 'Documents (downloadable files)',
+    description: 'A searchable list of documents with download buttons. Used for Judgments, Court Rules and Cause Lists.',
+    titleLabel: 'Title',
+    detail: false,
+    uses: ['file', 'note'],
+    fields: [
+      f('category', 'Category', 'select', { options: ['General'], filter: true }),
+      f('date', 'Date', 'date', { showInList: true, filter: true }),
+      f('note', 'Note shown under the title', 'text'),
+      f('file', 'Document', 'file'),
+    ],
+  },
+  gallery: {
+    label: 'Photo gallery (albums)',
+    description: 'Albums of photos with a full screen viewer.',
+    titleLabel: 'Album title',
+    detail: true,
+    sort: 'date',
+    uses: ['images', 'date', 'description'],
+    fields: [
+      f('date', 'Date', 'date'),
+      f('description', 'Description', 'textarea'),
+      f('images', 'Photos', 'images'),
+    ],
+  },
+  honours: {
+    label: 'Honour roll (people, no separate page)',
+    description: 'Photo cards grouped by a heading, without a separate page for each person. Used for past Chief Judges and Chief Registrars.',
+    titleLabel: 'Full name',
+    detail: false,
+    uses: ['photo', 'role', 'period', 'note', 'group', 'featured'],
+    fields: [
+      f('photo', 'Photo', 'image'),
+      f('role', 'Office held', 'text'),
+      f('period', 'Period', 'text', { help: 'For example: 2005 to 2014' }),
+      f('note', 'Note', 'text', { help: 'For example: Retired, Elevated to the Bench' }),
+      f('group', 'Group heading', 'text'),
+      f('featured', 'Show as a large card', 'toggle'),
+    ],
+  },
+  notices: {
+    label: 'Notices (scrolling announcements)',
+    description: 'Short notices shown in the scrolling bar on the home page. They disappear after their end date.',
+    titleLabel: 'Short title (for the admin list)',
+    detail: false,
+    sort: 'newest',
+    uses: ['label', 'message', 'link', 'expires'],
+    fields: [
+      f('label', 'Label', 'select', { options: ['URGENT', 'NEW', 'INFO', 'ADJOURNMENT', 'APPEAL', 'NOTICE'] }),
+      f('message', 'Message', 'textarea', { required: true }),
+      f('link', 'Link (optional)', 'url'),
+      f('expires', 'Stop showing after', 'date'),
+    ],
+  },
+  pages: {
+    label: 'Pages (free form)',
+    description: 'Stand alone pages written in the editor, such as About Us. Each page gets its own address.',
+    titleLabel: 'Page title',
+    detail: true,
+    rootUrls: true,
+    uses: ['subtitle', 'banner', 'body'],
+    fields: [
+      f('subtitle', 'Subtitle', 'text'),
+      f('banner', 'Banner background image', 'image'),
+      f('body', 'Content', 'richtext'),
+    ],
+  },
+  cards: {
+    label: 'Cards (general purpose)',
+    description: 'Picture cards that open a page. A good starting point for any new kind of content.',
+    titleLabel: 'Title',
+    detail: true,
+    uses: ['image', 'summary', 'body'],
+    fields: [
+      f('image', 'Picture', 'image'),
+      f('summary', 'Summary', 'textarea'),
+      f('body', 'Content', 'richtext'),
+    ],
+  },
+};
+
+module.exports = { LAYOUTS, f };

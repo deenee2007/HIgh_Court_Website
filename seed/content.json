@@ -1,0 +1,1789 @@
+{
+ "judges": [
+  {
+   "title": "Hon. Justice Halima S. Mohammed",
+   "legacy": [
+    "/profiles/justice_halima.html"
+   ],
+   "slug": "halima",
+   "order": 0,
+   "data": {
+    "photo": "/assets/img/judges/cj.jpeg",
+    "designation": "Chief Judge",
+    "subtitle": "Honourable Chief Judge, Gombe State",
+    "position": "Chief Judge",
+    "appointed": "February 16th, 2023",
+    "origin": "Billiri LGA",
+    "bio": "<p align=\"justify\">\n                        Honourable Justice Halima S. Mohammed, born on May 3, 1963, in Gombe State, Nigeria, is the Chief Judge of Gombe State. She is a distinguished legal professional \n                        with a Bachelor of Law from Ahmadu Bello University, Zaria, an LL.M from the University of Jos, and over 37 years of experience in the legal field. She began her legal career in 1987 as State Counsel II, and later appointed as Magistrate. She was Deputy Chief Registrar Gombe State High Court before her appointment as a High Court Judge in 2001. She was appointed Acting Chief Judge of Gombe State in October 2022. Her exemplary performance led to her confirmation as the Substantive Chief Judge on 16th February, 2023, where she has implemented legal reforms, improved court efficiency, and demonstrated a commitment to justice and fairness. Justice Halima S. Mohammed has attended various conferences and workshops nationally and internationally. She is known for her integrity, dedication, and contributions to legal scholarship and community engagement, making her a beacon of justice in Gombe State. She is widowed and has children and grandchildren.\n                    </p>",
+    "education": [
+     {
+      "title": "Nigerian Law School",
+      "text": "B.L",
+      "icon": "fas fa-graduation-cap"
+     },
+     {
+      "title": "University Education",
+      "text": "LL.B (Hons)",
+      "icon": "fas fa-graduation-cap"
+     },
+     {
+      "title": "Advanced Diploma",
+      "text": "Judicial Administration & Management",
+      "icon": "fas fa-certificate"
+     },
+     {
+      "title": "Secondary Education",
+      "text": "Government Secondary School, Kwami",
+      "icon": "fas fa-school"
+     },
+     {
+      "title": "Primary Education",
+      "text": "Kwami Central Primary School",
+      "icon": "fas fa-book"
+     }
+    ],
+    "career": [
+     {
+      "title": "Chief Judge",
+      "text": "2018 - Present"
+     },
+     {
+      "title": "Chief Registrar",
+      "text": "High Court of Justice, Gombe"
+     },
+     {
+      "title": "Deputy Chief Registrar",
+      "text": "Judicial Service Commission"
+     },
+     {
+      "title": "Chief Magistrate",
+      "text": "Magistrate Court Division"
+     },
+     {
+      "title": "State Counsel",
+      "text": "Ministry of Justice, Gombe State"
+     }
+    ],
+    "more": ""
+   }
+  },
+  {
+   "title": "Hon. Justice A. M Yakubu",
+   "legacy": [
+    "/profiles/justice_amyakubu.html"
+   ],
+   "slug": "amyakubu",
+   "order": 1,
+   "data": {
+    "photo": "/assets/img/judges/amyakubu.jpg",
+    "designation": "Honourable Judge",
+    "subtitle": "Honourable Judge, Gombe State High Court",
+    "position": "Judge of the High Court",
+    "appointed": "December 14th, 2021",
+    "origin": "Kwami LGA",
+    "bio": "<p>Hon. Justice A. M. Yakubu is a distinguished jurist of the Gombe State High Court. Known for his profound understanding of the law and dedication to justice, his Lordship has served in various capacities within the judicial system before his elevation to the Bench. He remains committed to upholding the rule of law and ensuring equitable justice for all citizens.</p>",
+    "education": [
+     {
+      "title": "Nigerian Law School",
+      "text": "B.L (Called to the Nigerian Bar)",
+      "icon": "fas fa-graduation-cap"
+     },
+     {
+      "title": "Ahmadu Bello University, Zaria",
+      "text": "Bachelor of Laws (LL.B Hons)",
+      "icon": "fas fa-university"
+     },
+     {
+      "title": "Advanced Diploma",
+      "text": "Judicial Administration & Management",
+      "icon": "fas fa-certificate"
+     },
+     {
+      "title": "Secondary Education",
+      "text": "Government Secondary School, Kwami",
+      "icon": "fas fa-school"
+     },
+     {
+      "title": "Primary Education",
+      "text": "Kwami Central Primary School",
+      "icon": "fas fa-book"
+     }
+    ],
+    "career": [
+     {
+      "title": "High Court Judge",
+      "text": "Gombe State Judiciary | 2021 - Present"
+     },
+     {
+      "title": "Chief Registrar",
+      "text": "High Court of Justice, Gombe"
+     },
+     {
+      "title": "Deputy Chief Registrar",
+      "text": "Judicial Service Commission"
+     },
+     {
+      "title": "Chief Magistrate",
+      "text": "Magistrate Court Division"
+     },
+     {
+      "title": "State Counsel",
+      "text": "Ministry of Justice, Gombe State"
+     }
+    ],
+    "more": ""
+   }
+  },
+  {
+   "title": "Hon. Justice H. H Kereng",
+   "legacy": [
+    "/profiles/justice_hhkereng.html"
+   ],
+   "slug": "hhkereng",
+   "order": 2,
+   "data": {
+    "photo": "/assets/img/judges/hhkereng.jpg",
+    "designation": "Honourable Judge",
+    "subtitle": "Honourable Judge, Gombe State High Court",
+    "position": "Judge of the High Court",
+    "appointed": "December 14th, 2021",
+    "origin": "Kaltungo LGA",
+    "bio": "<p>Hon. Justice A. M. Yakubu is a distinguished jurist of the Gombe State High Court. Known for his profound understanding of the law and dedication to justice, his Lordship has served in various capacities within the judicial system before his elevation to the Bench. He remains committed to upholding the rule of law and ensuring equitable justice for all citizens.</p>",
+    "education": [
+     {
+      "title": "Nigerian Law School",
+      "text": "B.L (Called to the Nigerian Bar)",
+      "icon": "fas fa-graduation-cap"
+     },
+     {
+      "title": "Ahmadu Bello University, Zaria",
+      "text": "Bachelor of Laws (LL.B Hons)",
+      "icon": "fas fa-university"
+     },
+     {
+      "title": "Advanced Diploma",
+      "text": "Judicial Administration & Management",
+      "icon": "fas fa-certificate"
+     },
+     {
+      "title": "Secondary Education",
+      "text": "Government Secondary School, Kwami",
+      "icon": "fas fa-school"
+     },
+     {
+      "title": "Primary Education",
+      "text": "Kwami Central Primary School",
+      "icon": "fas fa-book"
+     }
+    ],
+    "career": [
+     {
+      "title": "High Court Judge",
+      "text": "Gombe State Judiciary | 2021 - Present"
+     },
+     {
+      "title": "Chief Registrar",
+      "text": "High Court of Justice, Gombe"
+     },
+     {
+      "title": "Deputy Chief Registrar",
+      "text": "Judicial Service Commission"
+     },
+     {
+      "title": "Chief Magistrate",
+      "text": "Magistrate Court Division"
+     },
+     {
+      "title": "State Counsel",
+      "text": "Ministry of Justice, Gombe State"
+     }
+    ],
+    "more": ""
+   }
+  },
+  {
+   "title": "Hon. Justice S. Y Abubakar",
+   "legacy": [
+    "/profiles/justice_syabubakar.html"
+   ],
+   "slug": "syabubakar",
+   "order": 3,
+   "data": {
+    "photo": "/assets/img/judges/syabubakar.jpg",
+    "designation": "Honourable Judge",
+    "subtitle": "Honourable Judge, Gombe State High Court",
+    "position": "Judge of the High Court",
+    "appointed": "December 14th, 2021",
+    "origin": "Dukku LGA",
+    "bio": "<p>Hon. Justice A. M. Yakubu is a distinguished jurist of the Gombe State High Court. Known for his profound understanding of the law and dedication to justice, his Lordship has served in various capacities within the judicial system before his elevation to the Bench. He remains committed to upholding the rule of law and ensuring equitable justice for all citizens.</p>",
+    "education": [
+     {
+      "title": "Nigerian Law School",
+      "text": "B.L (Called to the Nigerian Bar)",
+      "icon": "fas fa-graduation-cap"
+     },
+     {
+      "title": "Ahmadu Bello University, Zaria",
+      "text": "Bachelor of Laws (LL.B Hons)",
+      "icon": "fas fa-university"
+     },
+     {
+      "title": "Advanced Diploma",
+      "text": "Judicial Administration & Management",
+      "icon": "fas fa-certificate"
+     },
+     {
+      "title": "Secondary Education",
+      "text": "Government Secondary School, Kwami",
+      "icon": "fas fa-school"
+     },
+     {
+      "title": "Primary Education",
+      "text": "Kwami Central Primary School",
+      "icon": "fas fa-book"
+     }
+    ],
+    "career": [
+     {
+      "title": "High Court Judge",
+      "text": "Gombe State Judiciary | 2021 - Present"
+     },
+     {
+      "title": "Chief Registrar",
+      "text": "High Court of Justice, Gombe"
+     },
+     {
+      "title": "Deputy Chief Registrar",
+      "text": "Judicial Service Commission"
+     },
+     {
+      "title": "Chief Magistrate",
+      "text": "Magistrate Court Division"
+     },
+     {
+      "title": "State Counsel",
+      "text": "Ministry of Justice, Gombe State"
+     }
+    ],
+    "more": ""
+   }
+  },
+  {
+   "title": "Hon. Justice M. A Haruna",
+   "legacy": [
+    "/profiles/justice_maharuna.html"
+   ],
+   "slug": "maharuna",
+   "order": 4,
+   "data": {
+    "photo": "/assets/img/judges/maharuna.jpg",
+    "designation": "Honourable Judge",
+    "subtitle": "Honourable Judge, Gombe State High Court",
+    "position": "Judge of the High Court",
+    "appointed": "December 14th, 2021",
+    "origin": "Gombe LGA",
+    "bio": "<p>Hon. Justice A. M. Yakubu is a distinguished jurist of the Gombe State High Court. Known for his profound understanding of the law and dedication to justice, his Lordship has served in various capacities within the judicial system before his elevation to the Bench. He remains committed to upholding the rule of law and ensuring equitable justice for all citizens.</p>",
+    "education": [
+     {
+      "title": "Nigerian Law School",
+      "text": "B.L (Called to the Nigerian Bar)",
+      "icon": "fas fa-graduation-cap"
+     },
+     {
+      "title": "Ahmadu Bello University, Zaria",
+      "text": "Bachelor of Laws (LL.B Hons)",
+      "icon": "fas fa-university"
+     },
+     {
+      "title": "Advanced Diploma",
+      "text": "Judicial Administration & Management",
+      "icon": "fas fa-certificate"
+     },
+     {
+      "title": "Secondary Education",
+      "text": "Government Secondary School, Kwami",
+      "icon": "fas fa-school"
+     },
+     {
+      "title": "Primary Education",
+      "text": "Kwami Central Primary School",
+      "icon": "fas fa-book"
+     }
+    ],
+    "career": [
+     {
+      "title": "High Court Judge",
+      "text": "Gombe State Judiciary | 2021 - Present"
+     },
+     {
+      "title": "Chief Registrar",
+      "text": "High Court of Justice, Gombe"
+     },
+     {
+      "title": "Deputy Chief Registrar",
+      "text": "Judicial Service Commission"
+     },
+     {
+      "title": "Chief Magistrate",
+      "text": "Magistrate Court Division"
+     },
+     {
+      "title": "State Counsel",
+      "text": "Ministry of Justice, Gombe State"
+     }
+    ],
+    "more": ""
+   }
+  },
+  {
+   "title": "Hon. Justice Fatima Musa",
+   "legacy": [
+    "/profiles/justice_fatimamusa.html"
+   ],
+   "slug": "fatimamusa",
+   "order": 5,
+   "data": {
+    "photo": "/assets/img/judges/fatimamusa.jpg",
+    "designation": "Honourable Judge",
+    "subtitle": "Honourable Judge, Gombe State High Court",
+    "position": "Judge of the High Court",
+    "appointed": "December 14th, 2021",
+    "origin": "Yamaltu Deba LGA",
+    "bio": "<p>Hon. Justice A. M. Yakubu is a distinguished jurist of the Gombe State High Court. Known for his profound understanding of the law and dedication to justice, his Lordship has served in various capacities within the judicial system before his elevation to the Bench. He remains committed to upholding the rule of law and ensuring equitable justice for all citizens.</p>",
+    "education": [
+     {
+      "title": "Nigerian Law School",
+      "text": "B.L (Called to the Nigerian Bar)",
+      "icon": "fas fa-graduation-cap"
+     },
+     {
+      "title": "Ahmadu Bello University, Zaria",
+      "text": "Bachelor of Laws (LL.B Hons)",
+      "icon": "fas fa-university"
+     },
+     {
+      "title": "Advanced Diploma",
+      "text": "Judicial Administration & Management",
+      "icon": "fas fa-certificate"
+     },
+     {
+      "title": "Secondary Education",
+      "text": "Government Secondary School, Kwami",
+      "icon": "fas fa-school"
+     },
+     {
+      "title": "Primary Education",
+      "text": "Kwami Central Primary School",
+      "icon": "fas fa-book"
+     }
+    ],
+    "career": [
+     {
+      "title": "High Court Judge",
+      "text": "Gombe State Judiciary | 2021 - Present"
+     },
+     {
+      "title": "Chief Registrar",
+      "text": "High Court of Justice, Gombe"
+     },
+     {
+      "title": "Deputy Chief Registrar",
+      "text": "Judicial Service Commission"
+     },
+     {
+      "title": "Chief Magistrate",
+      "text": "Magistrate Court Division"
+     },
+     {
+      "title": "State Counsel",
+      "text": "Ministry of Justice, Gombe State"
+     }
+    ],
+    "more": ""
+   }
+  },
+  {
+   "title": "Hon. Justice Z. A Rasheed",
+   "legacy": [
+    "/profiles/justice_zarasheed.html"
+   ],
+   "slug": "zarasheed",
+   "order": 6,
+   "data": {
+    "photo": "/assets/img/judges/zarasheed.jpg",
+    "designation": "Honourable Judge",
+    "subtitle": "Honourable Judge, Gombe State High Court",
+    "position": "Judge of the High Court",
+    "appointed": "December 14th, 2021",
+    "origin": "Dukku LGA",
+    "bio": "<p>Hon. Justice A. M. Yakubu is a distinguished jurist of the Gombe State High Court. Known for his profound understanding of the law and dedication to justice, his Lordship has served in various capacities within the judicial system before his elevation to the Bench. He remains committed to upholding the rule of law and ensuring equitable justice for all citizens.</p>",
+    "education": [
+     {
+      "title": "Nigerian Law School",
+      "text": "B.L (Called to the Nigerian Bar)",
+      "icon": "fas fa-graduation-cap"
+     },
+     {
+      "title": "Ahmadu Bello University, Zaria",
+      "text": "Bachelor of Laws (LL.B Hons)",
+      "icon": "fas fa-university"
+     },
+     {
+      "title": "Advanced Diploma",
+      "text": "Judicial Administration & Management",
+      "icon": "fas fa-certificate"
+     },
+     {
+      "title": "Secondary Education",
+      "text": "Government Secondary School, Kwami",
+      "icon": "fas fa-school"
+     },
+     {
+      "title": "Primary Education",
+      "text": "Kwami Central Primary School",
+      "icon": "fas fa-book"
+     }
+    ],
+    "career": [
+     {
+      "title": "High Court Judge",
+      "text": "Gombe State Judiciary | 2021 - Present"
+     },
+     {
+      "title": "Chief Registrar",
+      "text": "High Court of Justice, Gombe"
+     },
+     {
+      "title": "Deputy Chief Registrar",
+      "text": "Judicial Service Commission"
+     },
+     {
+      "title": "Chief Magistrate",
+      "text": "Magistrate Court Division"
+     },
+     {
+      "title": "State Counsel",
+      "text": "Ministry of Justice, Gombe State"
+     }
+    ],
+    "more": ""
+   }
+  },
+  {
+   "title": "Hon. Justice Abdussalam Muhammad",
+   "legacy": [
+    "/profiles/justice_abdussalam.html"
+   ],
+   "slug": "abdussalam",
+   "order": 7,
+   "data": {
+    "photo": "/assets/img/judges/abdussalam.jpg",
+    "designation": "Honourable Judge",
+    "subtitle": "Honourable Judge, Gombe State High Court",
+    "position": "Judge of the High Court",
+    "appointed": "December 14th, 2021",
+    "origin": "Akko LGA",
+    "bio": "<p>Hon. Justice A. M. Yakubu is a distinguished jurist of the Gombe State High Court. Known for his profound understanding of the law and dedication to justice, his Lordship has served in various capacities within the judicial system before his elevation to the Bench. He remains committed to upholding the rule of law and ensuring equitable justice for all citizens.</p>",
+    "education": [
+     {
+      "title": "Nigerian Law School",
+      "text": "B.L (Called to the Nigerian Bar)",
+      "icon": "fas fa-graduation-cap"
+     },
+     {
+      "title": "Ahmadu Bello University, Zaria",
+      "text": "Bachelor of Laws (LL.B Hons)",
+      "icon": "fas fa-university"
+     },
+     {
+      "title": "Advanced Diploma",
+      "text": "Judicial Administration & Management",
+      "icon": "fas fa-certificate"
+     },
+     {
+      "title": "Secondary Education",
+      "text": "Government Secondary School, Kwami",
+      "icon": "fas fa-school"
+     },
+     {
+      "title": "Primary Education",
+      "text": "Kwami Central Primary School",
+      "icon": "fas fa-book"
+     }
+    ],
+    "career": [
+     {
+      "title": "High Court Judge",
+      "text": "Gombe State Judiciary | 2021 - Present"
+     },
+     {
+      "title": "Chief Registrar",
+      "text": "High Court of Justice, Gombe"
+     },
+     {
+      "title": "Deputy Chief Registrar",
+      "text": "Judicial Service Commission"
+     },
+     {
+      "title": "Chief Magistrate",
+      "text": "Magistrate Court Division"
+     },
+     {
+      "title": "State Counsel",
+      "text": "Ministry of Justice, Gombe State"
+     }
+    ],
+    "more": ""
+   }
+  },
+  {
+   "title": "Hon. Justice D. S Sikkam",
+   "legacy": [
+    "/profiles/justice_dssikkam.html"
+   ],
+   "slug": "dssikkam",
+   "order": 8,
+   "data": {
+    "photo": "/assets/img/judges/dssikkam.jpg",
+    "designation": "Honourable Judge",
+    "subtitle": "Honourable Judge, Gombe State High Court",
+    "position": "Judge of the High Court",
+    "appointed": "December 14th, 2021",
+    "origin": "Shongom LGA",
+    "bio": "<p>Hon. Justice A. M. Yakubu is a distinguished jurist of the Gombe State High Court. Known for his profound understanding of the law and dedication to justice, his Lordship has served in various capacities within the judicial system before his elevation to the Bench. He remains committed to upholding the rule of law and ensuring equitable justice for all citizens.</p>",
+    "education": [
+     {
+      "title": "Nigerian Law School",
+      "text": "B.L (Called to the Nigerian Bar)",
+      "icon": "fas fa-graduation-cap"
+     },
+     {
+      "title": "Ahmadu Bello University, Zaria",
+      "text": "Bachelor of Laws (LL.B Hons)",
+      "icon": "fas fa-university"
+     },
+     {
+      "title": "Advanced Diploma",
+      "text": "Judicial Administration & Management",
+      "icon": "fas fa-certificate"
+     },
+     {
+      "title": "Secondary Education",
+      "text": "Government Secondary School, Kwami",
+      "icon": "fas fa-school"
+     },
+     {
+      "title": "Primary Education",
+      "text": "Kwami Central Primary School",
+      "icon": "fas fa-book"
+     }
+    ],
+    "career": [
+     {
+      "title": "High Court Judge",
+      "text": "Gombe State Judiciary | 2021 - Present"
+     },
+     {
+      "title": "Chief Registrar",
+      "text": "High Court of Justice, Gombe"
+     },
+     {
+      "title": "Deputy Chief Registrar",
+      "text": "Judicial Service Commission"
+     },
+     {
+      "title": "Chief Magistrate",
+      "text": "Magistrate Court Division"
+     },
+     {
+      "title": "State Counsel",
+      "text": "Ministry of Justice, Gombe State"
+     }
+    ],
+    "more": ""
+   }
+  }
+ ],
+ "directorates": [
+  {
+   "title": "Office of the Chief Registrar",
+   "legacy": [
+    "/chief_registrar.html"
+   ],
+   "slug": "chief-registrar",
+   "order": 0,
+   "data": {
+    "icon": "fas fa-user-tie",
+    "summary": "General administration.",
+    "heading": "Office of the Chief Registrar",
+    "tagline": "The Head of Administration and Custodian of Judicial Records",
+    "overview": "<h2 class=\"section-title mb-4\">General Administrative Function</h2>\n<p>The Office of the Chief Registrar (CR) serves as the administrative head of the Gombe State Judiciary. The Chief Registrar, supported by Deputy Chief Registrars, oversees the implementation of judicial policies and the day-to-day coordination of all departments and directorates.</p>\n<p>This office ensures that the vision of the Honorable Chief Judge is translated into efficient administrative action, maintaining the highest standards of discipline and productivity across the entire workforce.</p>",
+    "headName": "Barr Usamatu Abba Babayo",
+    "headTitle": "Chief Registrar",
+    "headPhoto": "/assets/img/directors/usamatu.jpeg",
+    "headQuote": "Our office is dedicated to providing the administrative excellence required to support the delivery of swift and impartial justice.",
+    "email": "cr@gombejudiciary.gov.ng",
+    "office": "Chief Registrar\u2019s Office, High Court Complex.",
+    "responsibilitiesTitle": "Key Specialized Sections",
+    "responsibilities": [
+     {
+      "icon": "fas fa-file-signature",
+      "title": "Probate Registry",
+      "text": "Management of wills, processing of letters of administration, and administration of estates of deceased persons."
+     },
+     {
+      "icon": "fas fa-coins",
+      "title": "Account Section",
+      "text": "Handling the court's revenue, judicial deposits, and specialized financial record-keeping under the CR's supervision."
+     },
+     {
+      "icon": "fas fa-boxes",
+      "title": "Stores",
+      "text": "Inventory management, procurement of judicial stationeries, and maintenance of court assets and supplies."
+     }
+    ],
+    "more": ""
+   }
+  },
+  {
+   "title": "Admin & Finance",
+   "legacy": [
+    "/admin_finance.html"
+   ],
+   "slug": "admin-finance",
+   "order": 1,
+   "data": {
+    "icon": "fas fa-file-invoice-dollar",
+    "summary": "Management of budgetary allocations, accounts, and general administration.",
+    "heading": "Directorate of Admin & Finance",
+    "tagline": "Managing Resources and Fiscal Responsibility",
+    "overview": "<p>The Directorate of Admin &amp; Finance is the central administrative and financial hub of the Gombe State Judiciary. It is responsible for the strategic management of the court's budget, expenditure, and overall administrative logistics.</p>\n<p>Our primary mandate is to ensure that the Judiciary operates with financial transparency and that all departments have the necessary resources to perform their judicial functions effectively. We handle everything from budget preparation to payroll management and auditing.</p>",
+    "headName": "Haruna Bello Gelengu, Esq",
+    "headTitle": "DCR, Admin & Finance",
+    "headPhoto": "/assets/img/directors/gelengu.jpg",
+    "headQuote": "Transparency and accountability are the watchwords of our fiscal administration, ensuring the Judiciary's independence through sound management.",
+    "email": "finance@gombejudiciary.gov.ng",
+    "office": "Finance Wing, High Court Complex.",
+    "responsibilitiesTitle": "Core Responsibilities",
+    "responsibilities": [
+     {
+      "icon": "fas fa-calculator",
+      "title": "Budgeting & Planning",
+      "text": "Preparing the annual judicial budget and coordinating with the State Ministry of Finance."
+     },
+     {
+      "icon": "fas fa-money-check-alt",
+      "title": "Payroll & Expenditure",
+      "text": "Managing staff salaries, allowances, and the disbursement of operational funds."
+     },
+     {
+      "icon": "fas fa-chart-line",
+      "title": "Internal Audit",
+      "text": "Ensuring strict adherence to financial regulations and maintaining accurate accounting records."
+     }
+    ],
+    "more": ""
+   }
+  },
+  {
+   "title": "Alternative Dispute Resolution (ADR)",
+   "legacy": [
+    "/adr.html"
+   ],
+   "slug": "adr",
+   "order": 2,
+   "data": {
+    "icon": "fas fa-hands-helping",
+    "summary": "Facilitating peaceful and timely conflict resolution through mediation, conciliation, and arbitration outside traditional litigation.",
+    "heading": "Alternative Dispute Resolution",
+    "tagline": "Promoting Harmonious Settlements through Mediation and Conciliation",
+    "overview": "<p>The Directorate of Alternative Dispute Resolution (ADR) provides an innovative approach to justice by offering parties a platform to resolve their disputes amicably without the rigors and adversarial nature of traditional litigation. </p>\n<p>By utilizing Mediation, Conciliation, and Arbitration, the ADR center helps to reduce the caseload of the courts while preserving relationships between parties. It is a faster, more cost-effective, and confidential way to achieve a \"win-win\" outcome for all involved.</p>",
+    "headName": "Muhammad Tukur Jungudo, Esq",
+    "headTitle": "DCR, ADR",
+    "headPhoto": "/assets/img/directors/jungudo.jpg",
+    "headQuote": "Justice is not only found in a judgment, but also in the peace that comes from a mutual agreement.",
+    "email": "adr@gombejudiciary.gov.ng",
+    "office": "Multi-Door Courthouse Wing, Gombe.",
+    "responsibilitiesTitle": "Core ADR Services",
+    "responsibilities": [
+     {
+      "icon": "fas fa-comments",
+      "title": "Mediation",
+      "text": "Facilitating neutral discussions to help parties reach a voluntary settlement."
+     },
+     {
+      "icon": "fas fa-gavel",
+      "title": "Arbitration",
+      "text": "Providing a private and formal hearing process to settle disputes outside the courtroom."
+     },
+     {
+      "icon": "fas fa-file-contract",
+      "title": "Terms of Settlement",
+      "text": "Drafting and filing agreements reached in ADR to become the official judgment of the court."
+     }
+    ],
+    "more": "<div class=\"row align-items-center bg-light rounded p-4 g-4 shadow-sm border-top border-5 border-success\">\n                <div class=\"col-md-12 text-center\">\n                    <h3 class=\"fw-bold\" style=\"color: #004d00;\">The ADR Workflow</h3>\n                    <p>Understanding how a case moves through the Alternative Dispute Resolution center.</p>\n                </div>\n                \n                \n\n                <div class=\"col-md-10 offset-md-1\">\n                    <div class=\"row text-center mt-3\">\n                        <div class=\"col-md-3\">\n                            <div class=\"badge bg-success p-2 rounded-pill mb-2\">Step 1</div>\n                            <p class=\"small fw-bold\">Referral or Filing</p>\n                        </div>\n                        <div class=\"col-md-3\">\n                            <div class=\"badge bg-success p-2 rounded-pill mb-2\">Step 2</div>\n                            <p class=\"small fw-bold\">Screening &amp; Assignment</p>\n                        </div>\n                        <div class=\"col-md-3\">\n                            <div class=\"badge bg-success p-2 rounded-pill mb-2\">Step 3</div>\n                            <p class=\"small fw-bold\">Mediation Session</p>\n                        </div>\n                        <div class=\"col-md-3\">\n                            <div class=\"badge bg-success p-2 rounded-pill mb-2\">Step 4</div>\n                            <p class=\"small fw-bold\">Final Agreement</p>\n                        </div>\n                    </div>\n                </div>\n            </div>"
+   }
+  },
+  {
+   "title": "Appeal",
+   "legacy": [
+    "/appeal.html"
+   ],
+   "slug": "appeal",
+   "order": 3,
+   "data": {
+    "icon": "fas fa-gavel",
+    "summary": "Handling appellate processes and records transmitted from lower courts.",
+    "heading": "Directorate of Appeal",
+    "tagline": "Ensuring Justice through Rigorous Judicial Review",
+    "overview": "<p>Overview text goes here...</p>",
+    "headName": "",
+    "headTitle": "Director, ICT Services",
+    "headPhoto": "",
+    "headQuote": "Director's quote goes here.",
+    "email": "ict@gombejudiciary.gov.ng",
+    "office": "ICT Wing, High Court Complex.",
+    "responsibilitiesTitle": "Core Functions",
+    "responsibilities": [
+     {
+      "icon": "fas fa-copy",
+      "title": "Record Compilation",
+      "text": "Supervising the assembly of case records from lower courts to ensure completeness for the High Court."
+     },
+     {
+      "icon": "fas fa-calendar-check",
+      "title": "Scheduling Reviews",
+      "text": "Coordinating with the registry to assign dates for appellate hearings and motions."
+     },
+     {
+      "icon": "fas fa-file-signature",
+      "title": "Process Management",
+      "text": "Facilitating the filing and service of notices of appeal and briefs of argument."
+     }
+    ],
+    "more": ""
+   }
+  },
+  {
+   "title": "Area Courts",
+   "legacy": [
+    "/area_courts.html"
+   ],
+   "slug": "area-courts",
+   "order": 4,
+   "data": {
+    "icon": "fas fa-landmark",
+    "summary": "Supervision and administration of Area Courts across the state.",
+    "heading": "Directorate of Area Courts",
+    "tagline": "Upholding Grassroots Justice and Customary Values",
+    "overview": "<p>Overview text goes here...</p>",
+    "headName": "BAR. AISHATU ABUBAKAR",
+    "headTitle": "Director, Area Courts",
+    "headPhoto": "/assets/img/directors/aishatu.jpg",
+    "headQuote": "Director's quote goes here.",
+    "email": "ict@gombejudiciary.gov.ng",
+    "office": "ICT Wing, High Court Complex.",
+    "responsibilitiesTitle": "Strategic Responsibilities",
+    "responsibilities": [
+     {
+      "icon": "fas fa-eye",
+      "title": "Supervision",
+      "text": "Conducting regular inspections of Area Court registries to ensure compliance with judicial procedures."
+     },
+     {
+      "icon": "fas fa-map-marked-alt",
+      "title": "Deployment",
+      "text": "Coordinating the posting and administrative management of Area Court judges and staff statewide."
+     },
+     {
+      "icon": "fas fa-balance-scale",
+      "title": "Justice Delivery",
+      "text": "Monitoring the timely disposal of cases and the accurate transmission of returns to the High Court."
+     }
+    ],
+    "more": ""
+   }
+  },
+  {
+   "title": "ICT",
+   "legacy": [
+    "/ict.html"
+   ],
+   "slug": "ict",
+   "order": 5,
+   "data": {
+    "icon": "fas fa-laptop-code",
+    "summary": "Digital infrastructure, e-filing support, and technical maintenance.",
+    "heading": "Directorate of ICT",
+    "tagline": "Driving Judicial Excellence through Digital Innovation",
+    "overview": "<p>Overview text goes here...</p>",
+    "headName": "",
+    "headTitle": "Director, ICT Services",
+    "headPhoto": "",
+    "headQuote": "Director's quote goes here.",
+    "email": "ict@gombejudiciary.gov.ng",
+    "office": "ICT Wing, High Court Complex.",
+    "responsibilitiesTitle": "Core Responsibilities",
+    "responsibilities": [
+     {
+      "icon": "fas fa-server",
+      "title": "E-Portal Management",
+      "text": "Maintaining the E-Affidavit and E-Filing portals for public use."
+     },
+     {
+      "icon": "fas fa-shield-alt",
+      "title": "Cybersecurity",
+      "text": "Securing judicial data and protecting the integrity of court records."
+     },
+     {
+      "icon": "fas fa-network-wired",
+      "title": "Infrastructure",
+      "text": "Managing the local area network (LAN) and hardware across all court locations."
+     }
+    ],
+    "more": "<section class=\"py-5 bg-light text-center\">\n        <div class=\"container\">\n            <div class=\"p-5 rounded shadow-sm\" style=\"background-color: #004d00; color: white;\">\n                <h3 class=\"fw-bold\">Web Development &amp; Maintenance</h3>\n                <p>This official portal was designed, developed, and is currently maintained by the specialized development team within the Directorate of ICT.</p>\n                <a href=\"/#contact\" class=\"btn btn-outline-light mt-3\">Inquire about E-Services</a>\n            </div>\n        </div>\n    </section>"
+   }
+  },
+  {
+   "title": "Library",
+   "legacy": [
+    "/library.html"
+   ],
+   "slug": "library",
+   "order": 6,
+   "data": {
+    "icon": "fas fa-book-reader",
+    "summary": "Legal research resources, law reports, and archival services.",
+    "heading": "Directorate of Library",
+    "tagline": "The Custodian of Legal Knowledge and Judicial Research",
+    "overview": "<p>The Directorate of Library serves as the intellectual hub of the Gombe State Judiciary. It is dedicated to providing comprehensive legal resources, law reports, and research materials to support the Honorable Judges, legal practitioners, and judicial staff in the efficient delivery of justice.</p>\n<p>Our collection spans across traditional law volumes and modern digital legal databases, ensuring that the court remains abreast of the latest judicial precedents and legislative changes both locally and internationally.</p>\n<h3 class=\"mt-5 mb-4 fw-bold\">Core Services</h3>\n<ul class=\"list-unstyled\">\n                        <li class=\"mb-3\"><i class=\"fas fa-check-circle text-success me-2\"></i> Provision of Law Reports (NWLR, SC, etc.)</li>\n                        <li class=\"mb-3\"><i class=\"fas fa-check-circle text-success me-2\"></i> Access to E-Library and Online Legal Databases</li>\n                        <li class=\"mb-3\"><i class=\"fas fa-check-circle text-success me-2\"></i> Archiving of Gombe State Edicts and Laws</li>\n                        <li class=\"mb-3\"><i class=\"fas fa-check-circle text-success me-2\"></i> Legal Research Support for Judicial Officers</li>\n                    </ul>",
+    "headName": "",
+    "headTitle": "Director, Library Services",
+    "headPhoto": "",
+    "headQuote": "Our mission is to empower the bench and bar with accurate legal information through a well-curated collection of global and local legal resources.",
+    "email": "library@gombejudiciary.gov.ng",
+    "office": "Judicial Library Wing, Gombe.",
+    "responsibilitiesTitle": "Core Responsibilities",
+    "responsibilities": [],
+    "more": ""
+   }
+  },
+  {
+   "title": "Litigation",
+   "legacy": [
+    "/litigation.html"
+   ],
+   "slug": "litigation",
+   "order": 7,
+   "data": {
+    "icon": "fas fa-balance-scale",
+    "summary": "Processing of case files, court registries, and dispute documentation.",
+    "heading": "Directorate of Litigation",
+    "tagline": "Managing Case Life-Cycles and the Enforcement of Justice",
+    "overview": "<p>The Directorate of Litigation is the heartbeat of the court's daily operations. It handles the filing, processing, and management of all civil and criminal cases brought before the High Court. From the moment a case is filed to its final resolution, this directorate ensures the record is handled with the utmost integrity.</p>\n<p>It acts as the primary interface between the legal practitioners and the judiciary, ensuring that all processes filed comply with the High Court Rules.</p>",
+    "headName": "ALIYU ABUBAKAR, Esq",
+    "headTitle": "DCR, Litigation",
+    "headPhoto": "/assets/img/directors/aliyuabubakar.jpg",
+    "headQuote": "Our commitment is to ensure that every case is processed with speed and every judgment is given the pathway to enforcement.",
+    "email": "litigation@gombejudiciary.gov.ng",
+    "office": "Litigation Wing, Gombe.",
+    "responsibilitiesTitle": "Core Responsibilities",
+    "responsibilities": [
+     {
+      "icon": "fas fa-folder-plus",
+      "title": "Case Filing & Registry",
+      "text": "Supervising the opening of new case files and ensuring proper indexing and safe-keeping."
+     },
+     {
+      "icon": "fas fa-calendar-alt",
+      "title": "Cause List Management",
+      "text": "Coordinating with various courts to ensure the weekly cause list is accurately populated."
+     },
+     {
+      "icon": "fas fa-certificate",
+      "title": "Certification",
+      "text": "Issuing Certified True Copies (CTC) of judgments, rulings, and other court proceedings."
+     }
+    ],
+    "more": "<div class=\"row align-items-center bg-light rounded p-4 g-4 shadow-sm\">\n                <div class=\"col-md-3 text-center\">\n                    <i class=\"fas fa-gavel fa-5x text-dark\"></i>\n                </div>\n                <div class=\"col-md-9 border-start border-md-2 ps-md-4\">\n                    <h3 class=\"fw-bold\" style=\"color: #004d00;\">The Execution Unit</h3>\n                    <p>The Execution Unit is the enforcement arm of the Directorate of Litigation. Its primary mandate is to ensure that the orders and judgments delivered by the Court are carried out to the letter.</p>\n                    <ul class=\"row list-unstyled mt-3\">\n                        <li class=\"col-md-6 mb-2\"><i class=\"fas fa-arrow-right text-success me-2\"></i> Enforcement of Writs of Execution</li>\n                        <li class=\"col-md-6 mb-2\"><i class=\"fas fa-arrow-right text-success me-2\"></i> Attachment and Sale of Property</li>\n                        <li class=\"col-md-6 mb-2\"><i class=\"fas fa-arrow-right text-success me-2\"></i> Execution of Possession Orders</li>\n                        <li class=\"col-md-6 mb-2\"><i class=\"fas fa-arrow-right text-success me-2\"></i> Service of Garnishee Orders</li>\n                    </ul>\n                </div>\n            </div>"
+   }
+  },
+  {
+   "title": "Magistracy",
+   "legacy": [
+    "/magistracy.html"
+   ],
+   "slug": "magistracy",
+   "order": 8,
+   "data": {
+    "icon": "fas fa-university",
+    "summary": "Oversight and coordination of Magistrate Courts within the jurisdiction.",
+    "heading": "Directorate of Magistracy",
+    "tagline": "Supervising the Engine Room of Summary Jurisdiction",
+    "overview": "<p>The Directorate of Magistracy is responsible for the overall administrative coordination of all Magistrate Courts in Gombe State. Magistrate Courts handle a significant volume of both criminal and civil cases, serving as a primary pillar of justice in our urban and rural communities.</p>\n<p>This directorate ensures that Magistrate Courts are adequately staffed, resourced, and functioning in accordance with the Magistrate Court Laws and Rules, providing oversight for the efficient disposal of cases.</p>",
+    "headName": "MUSA SALE KILAWA, Esq",
+    "headTitle": "DCR, Magistracy",
+    "headPhoto": "/assets/img/directors/kilawa.jpg",
+    "headQuote": "Our mission is to ensure that the Magistrate Courts remain efficient, accessible, and firm in the administration of summary justice.",
+    "email": "magistracy@gombejudiciary.gov.ng",
+    "office": "Magistracy Wing, High Court Complex.",
+    "responsibilitiesTitle": "Core Responsibilities",
+    "responsibilities": [
+     {
+      "icon": "fas fa-user-tie",
+      "title": "Magistrate Oversight",
+      "text": "Coordinating the administrative needs and welfare of all Magistrates across the state."
+     },
+     {
+      "icon": "fas fa-clipboard-list",
+      "title": "Returns & Monitoring",
+      "text": "Collecting and analyzing monthly returns of cases from all Magistrate Courts for performance review."
+     },
+     {
+      "icon": "fas fa-map-pin",
+      "title": "Station Management",
+      "text": "Managing the physical facilities and logistics of Magistrate Court stations statewide."
+     }
+    ],
+    "more": ""
+   }
+  },
+  {
+   "title": "Personnel",
+   "legacy": [
+    "/personnel.html"
+   ],
+   "slug": "personnel",
+   "order": 9,
+   "data": {
+    "icon": "fas fa-users-cog",
+    "summary": "Human resources, staff welfare, promotion, and discipline.",
+    "heading": "Directorate of Personnel",
+    "tagline": "Managing Human Capital for Efficient Judicial Service",
+    "overview": "<p>The Directorate of Personnel is responsible for the recruitment, development, and welfare of the entire workforce of the Gombe State Judiciary. We ensure that the court is staffed by competent, disciplined, and motivated individuals dedicated to the service of justice.</p>\n<p>Beyond administrative duties, the directorate manages career progression, retirement benefits, and personnel records to maintain a high standard of professional ethics within the organization.</p>",
+    "headName": "KAWUWA MUSA, Esq",
+    "headTitle": "Director, Personnel",
+    "headPhoto": "/assets/img/directors/kawuwa.jpg",
+    "headQuote": "Our people are our greatest asset. We are committed to fostering a professional environment where merit and integrity thrive.",
+    "email": "personnel@gombejudiciary.gov.ng",
+    "office": "Personnel Wing, High Court Complex.",
+    "responsibilitiesTitle": "Core Responsibilities",
+    "responsibilities": [
+     {
+      "icon": "fas fa-user-plus",
+      "title": "Recruitment & Promotion",
+      "text": "Handling the hiring process and regular career progression reviews for all judicial staff."
+     },
+     {
+      "icon": "fas fa-id-card",
+      "title": "Staff Welfare",
+      "text": "Administering benefits, leave approvals, and ensuring a healthy work environment."
+     },
+     {
+      "icon": "fas fa-graduation-cap",
+      "title": "Training & Development",
+      "text": "Coordinating workshops and capacity-building programs for administrative and judicial officers."
+     }
+    ],
+    "more": "<h3 class=\"text-center mb-4 fw-bold\" style=\"color: #004d00;\">Specialized Administrative Units</h3>\n<div class=\"row g-4\">\n                <div class=\"col-md-4\">\n                    <div class=\"p-4 bg-light rounded h-100 border-top border-4 border-success shadow-sm\">\n                        <h5 class=\"fw-bold\"><i class=\"fas fa-folder-open me-2 text-success\"></i>Open Registry</h5>\n                        <p class=\"small text-muted\">Responsible for the management of general correspondence, public files, and non-confidential staff records.</p>\n                    </div>\n                </div>\n                <div class=\"col-md-4\">\n                    <div class=\"p-4 bg-light rounded h-100 border-top border-4 border-dark shadow-sm\">\n                        <h5 class=\"fw-bold\"><i class=\"fas fa-user-shield me-2 text-dark\"></i>Secret Registry</h5>\n                        <p class=\"small text-muted\">Handles classified documents, confidential personnel files, and sensitive administrative communications.</p>\n                    </div>\n                </div>\n                <div class=\"col-md-4\">\n                    <div class=\"p-4 bg-light rounded h-100 border-top border-4 border-warning shadow-sm\">\n                        <h5 class=\"fw-bold\"><i class=\"fas fa-user-check me-2 text-warning\"></i>Staff Officer</h5>\n                        <p class=\"small text-muted\">Serves as the primary liaison between staff and management, ensuring discipline and administrative compliance.</p>\n                    </div>\n                </div>\n            </div>"
+   }
+  },
+  {
+   "title": "Process",
+   "legacy": [
+    "/process.html"
+   ],
+   "slug": "process",
+   "order": 10,
+   "data": {
+    "icon": "fas fa-paper-plane",
+    "summary": "Service of court processes, summons, and official notices.",
+    "heading": "Directorate of Process",
+    "tagline": "Facilitating Legal Notice and Judicial Enforcement",
+    "overview": "<p>The Directorate of Process (Sheriff's Department) is responsible for the formal service of all court processes, including summons, writs, and notices. It ensures that all parties in a legal matter are properly notified in accordance with the law, which is a fundamental requirement for a fair hearing.</p>\n<p>The directorate operates through a network of Bailiffs and Process Servers who carry out the physical delivery of documents and the enforcement of court orders across the state.</p>",
+    "headName": "",
+    "headTitle": "Director, Process",
+    "headPhoto": "",
+    "headQuote": "Service of process is the foundation of jurisdiction. We ensure that justice starts with a proper and lawful notice.",
+    "email": "process@gombejudiciary.gov.ng",
+    "office": "Sheriff's Wing, High Court Gombe.",
+    "responsibilitiesTitle": "Core Responsibilities",
+    "responsibilities": [
+     {
+      "icon": "fas fa-envelope-open-text",
+      "title": "Service of Summons",
+      "text": "Ensuring that defendants and witnesses are legally served with court documents."
+     },
+     {
+      "icon": "fas fa-file-signature",
+      "title": "Affidavits of Service",
+      "text": "Processing and filing formal proof that a document has been successfully served."
+     },
+     {
+      "icon": "fas fa-route",
+      "title": "Logistics & Tracking",
+      "text": "Coordinating the movement of process servers to various local governments in Gombe State."
+     }
+    ],
+    "more": "<div class=\"row align-items-center bg-light rounded p-4 g-4 shadow-sm border-start border-5 border-success\">\n                <div class=\"col-md-3 text-center\">\n                    <i class=\"fas fa-tools fa-5x text-secondary\"></i>\n                </div>\n                <div class=\"col-md-9\">\n                    <h3 class=\"fw-bold\" style=\"color: #004d00;\">The Execution Unit (Bailiff Section)</h3>\n                    <p>The Execution Unit under this directorate focuses on the **physical enforcement** of court mandates. This includes the attachment of property and the recovery of premises as ordered by the court.</p>\n                    \n                    \n\n                    <div class=\"row mt-3\">\n                        <div class=\"col-md-6\">\n                            <ul class=\"list-unstyled\">\n                                <li class=\"mb-2\"><i class=\"fas fa-check text-success me-2\"></i> Execution of Writs of Fi-Fa</li>\n                                <li class=\"col-md-12 mb-2\"><i class=\"fas fa-check text-success me-2\"></i> Delivery of Possession</li>\n                            </ul>\n                        </div>\n                        <div class=\"col-md-6\">\n                            <ul class=\"list-unstyled\">\n                                <li class=\"mb-2\"><i class=\"fas fa-check text-success me-2\"></i> Arrest and Production of Persons</li>\n                                <li class=\"mb-2\"><i class=\"fas fa-check text-success me-2\"></i> Security and Custody of Attached Goods</li>\n                            </ul>\n                        </div>\n                    </div>\n                </div>\n            </div>"
+   }
+  },
+  {
+   "title": "Protocol",
+   "legacy": [
+    "/protocol.html"
+   ],
+   "slug": "protocol",
+   "order": 11,
+   "data": {
+    "icon": "fas fa-concierge-bell",
+    "summary": "Managing the official etiquette, ceremonies, and travel arrangements for the Honorable Chief Judge.",
+    "heading": "Directorate of Protocol",
+    "tagline": "Upholding the Standards of Judicial Etiquette and Diplomacy",
+    "overview": "<p align=\"justify\">The Directorate of Protocol serves as the official liaison office of the Gombe State High Court. We are responsible for the seamless coordination of all ceremonial activities, official visits, and the management of the public image of the Honorable Chief Judge and the High Court Bench.</p>\n<p align=\"justify\">Our work ensures that judicial traditions are respected and that the interaction between the Judiciary and other arms of government, as well as international bodies, is handled with the highest level of professionalism and decorum.</p>",
+    "headName": "BAR. HALIMA A ALIYU",
+    "headTitle": "Director, Protocol",
+    "headPhoto": "/assets/img/directors/halima.jpg",
+    "headQuote": "Excellence in protocol is not just about ceremony; it is about reflecting the dignity and order of the temple of justice.",
+    "email": "protocol@gombejudiciary.gov.ng",
+    "office": "Chief Judge's Wing, Gombe.",
+    "responsibilitiesTitle": "Core Responsibilities",
+    "responsibilities": [
+     {
+      "icon": "fas fa-calendar-star",
+      "title": "Event Management",
+      "text": "Organizing Legal Year ceremonies, Valedictory Court Sessions, and Judicial workshops."
+     },
+     {
+      "icon": "fas fa-plane-arrival",
+      "title": "Travel & Reception",
+      "text": "Coordinating official travels, logistics, and the reception of visiting dignitaries and judicial officers."
+     },
+     {
+      "icon": "fas fa-handshake",
+      "title": "Liaison Services",
+      "text": "Maintaining relations with the State Government, Security Agencies, and the Nigerian Bar Association (NBA)."
+     }
+    ],
+    "more": "<div class=\"row g-4\">\n                <div class=\"col-md-12\">\n                    <h3 class=\"fw-bold mb-4\" style=\"color: #004d00;\">Specialized Functions</h3>\n                    <div class=\"row row-cols-1 row-cols-md-2 g-4\">\n                        <div class=\"col\">\n                            <div class=\"d-flex align-items-start p-3 border rounded shadow-sm bg-white\">\n                                <div class=\"bg-success text-white p-3 rounded me-3\">\n                                    <i class=\"fas fa-car-side\"></i>\n                                </div>\n                                <div>\n                                    <h5 class=\"fw-bold\">Fleet Management</h5>\n                                    <p class=\"small text-muted mb-0\">Overseeing the official judicial vehicles and ensuring logistical readiness for court assignments.</p>\n                                </div>\n                            </div>\n                        </div>\n                        <div class=\"col\">\n                            <div class=\"d-flex align-items-start p-3 border rounded shadow-sm bg-white\">\n                                <div class=\"bg-success text-white p-3 rounded me-3\">\n                                    <i class=\"fas fa-microphone-alt\"></i>\n                                </div>\n                                <div>\n                                    <h5 class=\"fw-bold\">Public Relations</h5>\n                                    <p class=\"small text-muted mb-0\">Managing the official communications and media presence during public judicial functions.</p>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>"
+   }
+  },
+  {
+   "title": "Research, Planning & Statistics",
+   "legacy": [
+    "/research_planning.html"
+   ],
+   "slug": "research-planning",
+   "order": 12,
+   "data": {
+    "icon": "fas fa-chart-pie",
+    "summary": "Driving judicial efficiency through data-driven analysis, strategic policy formulation, and comprehensive performance monitoring.",
+    "heading": "Research, Planning & Statistics",
+    "tagline": "Driving Judicial Reform through Data and Strategic Insight",
+    "overview": "<p>The Directorate of Research, Planning, and Statistics (RP&amp;S) is vital for the evidence-based management of the Gombe State Judiciary. We specialize in the collection and analysis of judicial data to monitor case flow, judge performance, and court congestion.</p>\n<p>Our department is responsible for producing the Annual Judicial Report, developing long-term strategic plans, and conducting legal research that aids the administration of justice and policy formulation.</p>",
+    "headName": "",
+    "headTitle": "Director, RP&S",
+    "headPhoto": "",
+    "headQuote": "Precision in data leads to perfection in planning. We turn numbers into judicial intelligence.",
+    "email": "research@gombejudiciary.gov.ng",
+    "office": "Administrative Block, Room 12.",
+    "responsibilitiesTitle": "Core Functions",
+    "responsibilities": [
+     {
+      "icon": "fas fa-microscope",
+      "title": "Legal Research",
+      "text": "Conducting in-depth research on legal trends and administrative reforms to advise the Chief Registrar."
+     },
+     {
+      "icon": "fas fa-project-diagram",
+      "title": "Strategic Planning",
+      "text": "Formulating short and long-term goals for the growth and modernization of the Gombe State Judiciary."
+     },
+     {
+      "icon": "fas fa-database",
+      "title": "Statistical Analysis",
+      "text": "Managing the data bank of all court cases and generating reports for decision-making."
+     }
+    ],
+    "more": "<div class=\"row align-items-center bg-light rounded p-4 g-4 shadow-sm\">\n                <div class=\"col-md-12 text-center\">\n                    <h3 class=\"fw-bold\" style=\"color: #004d00;\">The Judicial Planning Cycle</h3>\n                    <p>How we utilize data to improve justice delivery.</p>\n                </div>\n                \n                \n\n                <div class=\"col-md-12\">\n                    <div class=\"list-group list-group-flush bg-transparent\">\n                        <div class=\"list-group-item bg-transparent border-0\"><i class=\"fas fa-check-circle text-success me-2\"></i> Monthly collection of returns from High Courts and Magistrate Courts.</div>\n                        <div class=\"list-group-item bg-transparent border-0\"><i class=\"fas fa-check-circle text-success me-2\"></i> Analyzing the disposal rate vs. filing rate to identify bottlenecks.</div>\n                        <div class=\"list-group-item bg-transparent border-0\"><i class=\"fas fa-check-circle text-success me-2\"></i> Publication of the Judiciary's quarterly performance review.</div>\n                        <div class=\"list-group-item bg-transparent border-0\"><i class=\"fas fa-check-circle text-success me-2\"></i> Coordination of judicial committees and project monitoring teams.</div>\n                    </div>\n                </div>\n            </div>"
+   }
+  },
+  {
+   "title": "Special Duties",
+   "legacy": [
+    "/special_duties.html"
+   ],
+   "slug": "special-duties",
+   "order": 13,
+   "data": {
+    "icon": "fas fa-clipboard-check",
+    "summary": "Handling ad-hoc assignments, and special projects.",
+    "heading": "Directorate of Special Duties",
+    "tagline": "Execution of Strategic Mandates and Judicial Oversight",
+    "overview": "<p>The Directorate of Special Duties is a versatile administrative arm of the Gombe State Judiciary. It is tasked with the execution of specific, often sensitive, assignments directed by the Honorable Chief Judge or the Chief Registrar.</p>\n<p>Our mandate includes monitoring the implementation of judicial policies, conducting internal administrative inquiries, and overseeing projects that do not fall strictly within the traditional departmental boundaries. We act as a catalyst for reform and efficiency within the judicial system.</p>",
+    "headName": "IDRIS UMAR REME",
+    "headTitle": "Director, Special Duties",
+    "headPhoto": "/assets/img/directors/idris.jpg",
+    "headQuote": "Our role is to provide the flexibility and oversight necessary to handle the complex and evolving needs of a modern judiciary.",
+    "email": "specialduties@gombejudiciary.gov.ng",
+    "office": "Administrative Block, Gombe.",
+    "responsibilitiesTitle": "Core Responsibilities",
+    "responsibilities": [
+     {
+      "icon": "fas fa-tasks",
+      "title": "Policy Monitoring",
+      "text": "Ensuring that new judicial reforms and administrative directives are being implemented across all divisions."
+     },
+     {
+      "icon": "fas fa-search-plus",
+      "title": "Internal Inquiries",
+      "text": "Conducting investigations into administrative bottlenecks or complaints to improve service delivery."
+     },
+     {
+      "icon": "fas fa-project-diagram",
+      "title": "Ad-hoc Assignments",
+      "text": "Handling special projects, committee secretariats, and high-level inter-agency coordination."
+     }
+    ],
+    "more": "<div class=\"row bg-dark text-white rounded p-4 g-4 shadow-sm\">\n                <div class=\"col-md-12 text-center\">\n                    <h3 class=\"fw-bold border-bottom border-success d-inline-block pb-2\">The Oversight Mandate</h3>\n                    <p class=\"mt-3\">The Directorate of Special Duties bridges the gap between policy and practice through a rigorous feedback loop.</p>\n                </div>\n                \n                \n\n                <div class=\"col-md-4 text-center\">\n                    <div class=\"p-3 border border-secondary rounded\">\n                        <i class=\"fas fa-bullseye fa-2x mb-2 text-success\"></i>\n                        <h5>Target</h5>\n                        <p class=\"small\">Identifying areas for administrative improvement.</p>\n                    </div>\n                </div>\n                <div class=\"col-md-4 text-center\">\n                    <div class=\"p-3 border border-secondary rounded\">\n                        <i class=\"fas fa-eye fa-2x mb-2 text-success\"></i>\n                        <h5>Monitor</h5>\n                        <p class=\"small\">Real-time observation of judicial processes.</p>\n                    </div>\n                </div>\n                <div class=\"col-md-4 text-center\">\n                    <div class=\"p-3 border border-secondary rounded\">\n                        <i class=\"fas fa-file-alt fa-2x mb-2 text-success\"></i>\n                        <h5>Report</h5>\n                        <p class=\"small\">Providing direct feedback to the Judiciary leadership.</p>\n                    </div>\n                </div>\n            </div>"
+   }
+  }
+ ],
+ "pastChiefJudges": [
+  {
+   "title": "Hon. Justice Zainab Bulkachuwa",
+   "data": {
+    "photo": "/assets/img/judges/bulkachuwa.jpg",
+    "role": "Chief Judge",
+    "period": "1996 \u2014 2005",
+    "group": "Substantive Chief Judges"
+   },
+   "order": 0
+  },
+  {
+   "title": "Hon. Justice Hakila Y. Heman",
+   "data": {
+    "photo": "/assets/img/judges/hakila.jpg",
+    "role": "Chief Judge",
+    "period": "2005 \u2014 2014",
+    "group": "Substantive Chief Judges"
+   },
+   "order": 1
+  },
+  {
+   "title": "Hon. Justice Joseph A. Awak",
+   "data": {
+    "photo": "",
+    "role": "Chief Judge",
+    "period": "2014 \u2014 2021",
+    "group": "Substantive Chief Judges"
+   },
+   "order": 2
+  },
+  {
+   "title": "Hon. Justice Beatrice Iliya",
+   "data": {
+    "photo": "/assets/img/judges/beatrice.jpg",
+    "role": "Acting Chief Judge",
+    "period": "",
+    "group": "Acting Chief Judges"
+   },
+   "order": 10
+  },
+  {
+   "title": "Hon. Justice Mua'zu Abdulkadir Pindiga",
+   "data": {
+    "photo": "/assets/img/judges/muazupindiga.jpg",
+    "role": "Acting Chief Judge",
+    "period": "",
+    "group": "Acting Chief Judges"
+   },
+   "order": 11
+  }
+ ],
+ "pastChiefRegistrars": [
+  {
+   "title": "Hon. Justice Paul Idi Apollos",
+   "data": {
+    "photo": "",
+    "period": "1997 \u2014 2001",
+    "note": "Elevated to Bench",
+    "role": "Chief Registrar"
+   },
+   "order": 0
+  },
+  {
+   "title": "Barr Mohammed Umar Pindiga",
+   "data": {
+    "photo": "",
+    "period": "2000 \u2014 2005",
+    "note": "Retired",
+    "role": "Chief Registrar"
+   },
+   "order": 1
+  },
+  {
+   "title": "Hon. Justice Muhammad Auwal Haruna",
+   "data": {
+    "photo": "/assets/img/judges/maharuna.jpg",
+    "period": "2005 \u2014 2012",
+    "note": "Elevated to Bench",
+    "role": "Chief Registrar"
+   },
+   "order": 2
+  },
+  {
+   "title": "Barr Abdulsalam Jatau",
+   "data": {
+    "photo": "",
+    "period": "2012 \u2014 2018",
+    "note": "Retired",
+    "role": "Chief Registrar"
+   },
+   "order": 3
+  },
+  {
+   "title": "Barr Bello Isa Umar Sherif",
+   "data": {
+    "photo": "",
+    "period": "2018 \u2014 2023",
+    "note": "Retired",
+    "role": "Chief Registrar"
+   },
+   "order": 4
+  }
+ ],
+ "news": [
+  {
+   "title": "New Practice Directions Issued",
+   "data": {
+    "category": "Announcement",
+    "summary": "The Hon. Chief Judge has issued new directions regarding filing procedures.",
+    "body": "<p>The Hon. Chief Judge has issued new directions regarding filing procedures.</p>",
+    "date": "",
+    "image": ""
+   },
+   "order": 0
+  },
+  {
+   "title": "Legal Year Opening Ceremony",
+   "data": {
+    "category": "Event",
+    "summary": "Highlights from the commencement of the new legal year at the High Court complex.",
+    "body": "<p>Highlights from the commencement of the new legal year at the High Court complex.</p>",
+    "date": "",
+    "image": ""
+   },
+   "order": 1
+  },
+  {
+   "title": "Judicial Service Commission Notice",
+   "data": {
+    "category": "Recruitment",
+    "summary": "Call for applications for support staff vacancies within the judiciary.",
+    "body": "<p>Call for applications for support staff vacancies within the judiciary.</p>",
+    "date": "",
+    "image": ""
+   },
+   "order": 2
+  }
+ ],
+ "judgments": [
+  {
+   "title": "THE STATE vs. USMAN & 2 ORS",
+   "status": "published",
+   "order": 0,
+   "data": {
+    "suitNo": "GHC/CR/115/2024",
+    "judge": "Hon. Justice A. M. Yakubu",
+    "date": "2024-11-12",
+    "category": "Criminal",
+    "file": "/assets/pdf/judgments/case1.pdf"
+   }
+  },
+  {
+   "title": "BELLO INVESTMENTS LTD vs. GOMBE GOVT",
+   "status": "published",
+   "order": 1,
+   "data": {
+    "suitNo": "GHC/CV/50/2023",
+    "judge": "Hon. Justice H. S. Mohammed (CJ)",
+    "date": "2023-09-05",
+    "category": "Civil",
+    "file": ""
+   }
+  },
+  {
+   "title": "SANI vs. IBRAHIM",
+   "status": "published",
+   "order": 2,
+   "data": {
+    "suitNo": "GHC/LND/10/2022",
+    "judge": "Hon. Justice Adamu Jauro",
+    "date": "2022-05-20",
+    "category": "Land",
+    "file": ""
+   }
+  },
+  {
+   "title": "ABC vs. XYZ",
+   "status": "draft",
+   "order": 3,
+   "data": {
+    "suitNo": "GHC/LND/10/2026",
+    "judge": "Hon. Justice Adamu Jauro",
+    "date": "2022-05-20",
+    "category": "Land",
+    "file": ""
+   }
+  },
+  {
+   "title": "SANI vs. IBRAHIM",
+   "status": "draft",
+   "order": 4,
+   "data": {
+    "suitNo": "GHC/LND/10/2022",
+    "judge": "Hon. Justice Adamu Jauro",
+    "date": "2026-01-05",
+    "category": "Land",
+    "file": ""
+   }
+  }
+ ],
+ "rules": [
+  {
+   "title": "High Court Civil Procedure Rules 2024",
+   "order": 0,
+   "data": {
+    "category": "Procedure Rules",
+    "note": "Effective: January 2024",
+    "file": ""
+   }
+  },
+  {
+   "title": "Practice Direction on Virtual Hearings",
+   "order": 2,
+   "data": {
+    "category": "Practice Directions",
+    "note": "Issued: June 2025",
+    "file": ""
+   }
+  },
+  {
+   "title": "Notice of Annual Court Vacation 2026",
+   "order": 3,
+   "data": {
+    "category": "Legal Notices",
+    "note": "Dated: Dec 2025",
+    "file": ""
+   }
+  }
+ ],
+ "causeLists": [
+  {
+   "title": "High Court 1",
+   "order": 1,
+   "data": {
+    "court": "High Court Division",
+    "judge": "Hon. Justice Halima S. Mohammed (CJ)",
+    "file": ""
+   }
+  },
+  {
+   "title": "High Court 2",
+   "order": 2,
+   "data": {
+    "court": "High Court Division",
+    "judge": "Hon. Justice A. M. Yakubu",
+    "file": ""
+   }
+  },
+  {
+   "title": "High Court 3",
+   "order": 3,
+   "data": {
+    "court": "High Court Division",
+    "judge": "Hon. Justice H. H Kereng",
+    "file": ""
+   }
+  },
+  {
+   "title": "High Court 4",
+   "order": 4,
+   "data": {
+    "court": "High Court Division",
+    "judge": "Hon. Justice S. Y Abubakar",
+    "file": ""
+   }
+  },
+  {
+   "title": "High Court 5",
+   "order": 5,
+   "data": {
+    "court": "High Court Division",
+    "judge": "Hon. Justice M. A Haruna",
+    "file": ""
+   }
+  },
+  {
+   "title": "High Court 6",
+   "order": 6,
+   "data": {
+    "court": "High Court Division",
+    "judge": "Hon. Justice Fatima Musa",
+    "file": ""
+   }
+  },
+  {
+   "title": "High Court 7",
+   "order": 7,
+   "data": {
+    "court": "High Court Division",
+    "judge": "Hon. Justice Z. A Rasheed",
+    "file": ""
+   }
+  },
+  {
+   "title": "High Court 8",
+   "order": 8,
+   "data": {
+    "court": "High Court Division",
+    "judge": "Hon. Justice Abdussalam Muhammad",
+    "file": ""
+   }
+  },
+  {
+   "title": "High Court 9",
+   "order": 9,
+   "data": {
+    "court": "High Court Division",
+    "judge": "Hon. Justice D. S Sikkam",
+    "file": ""
+   }
+  },
+  {
+   "title": "Magistrate Court 1",
+   "order": 101,
+   "data": {
+    "court": "Chief Magistrate and District Courts (Metropolis)",
+    "judge": "",
+    "file": ""
+   }
+  },
+  {
+   "title": "Magistrate Court 2",
+   "order": 102,
+   "data": {
+    "court": "Chief Magistrate and District Courts (Metropolis)",
+    "judge": "",
+    "file": ""
+   }
+  },
+  {
+   "title": "Magistrate Court 3",
+   "order": 103,
+   "data": {
+    "court": "Chief Magistrate and District Courts (Metropolis)",
+    "judge": "",
+    "file": ""
+   }
+  },
+  {
+   "title": "Magistrate Court 4",
+   "order": 104,
+   "data": {
+    "court": "Chief Magistrate and District Courts (Metropolis)",
+    "judge": "",
+    "file": ""
+   }
+  },
+  {
+   "title": "Magistrate Court 5",
+   "order": 105,
+   "data": {
+    "court": "Chief Magistrate and District Courts (Metropolis)",
+    "judge": "",
+    "file": ""
+   }
+  },
+  {
+   "title": "Magistrate Court 6",
+   "order": 106,
+   "data": {
+    "court": "Chief Magistrate and District Courts (Metropolis)",
+    "judge": "",
+    "file": ""
+   }
+  },
+  {
+   "title": "Magistrate Court 7",
+   "order": 107,
+   "data": {
+    "court": "Chief Magistrate and District Courts (Metropolis)",
+    "judge": "",
+    "file": ""
+   }
+  },
+  {
+   "title": "Magistrate Court 8",
+   "order": 108,
+   "data": {
+    "court": "Chief Magistrate and District Courts (Metropolis)",
+    "judge": "",
+    "file": ""
+   }
+  },
+  {
+   "title": "Magistrate Court 9",
+   "order": 109,
+   "data": {
+    "court": "Chief Magistrate and District Courts (Metropolis)",
+    "judge": "",
+    "file": ""
+   }
+  },
+  {
+   "title": "Magistrate Court 10",
+   "order": 110,
+   "data": {
+    "court": "Chief Magistrate and District Courts (Metropolis)",
+    "judge": "",
+    "file": ""
+   }
+  },
+  {
+   "title": "Magistrate Court 11",
+   "order": 111,
+   "data": {
+    "court": "Chief Magistrate and District Courts (Metropolis)",
+    "judge": "",
+    "file": ""
+   }
+  },
+  {
+   "title": "Magistrate Court 12",
+   "order": 112,
+   "data": {
+    "court": "Chief Magistrate and District Courts (Metropolis)",
+    "judge": "",
+    "file": ""
+   }
+  },
+  {
+   "title": "Magistrate Court 13",
+   "order": 113,
+   "data": {
+    "court": "Chief Magistrate and District Courts (Metropolis)",
+    "judge": "",
+    "file": ""
+   }
+  },
+  {
+   "title": "Magistrate Court 14",
+   "order": 114,
+   "data": {
+    "court": "Chief Magistrate and District Courts (Metropolis)",
+    "judge": "",
+    "file": ""
+   }
+  },
+  {
+   "title": "Magistrate Court 15",
+   "order": 115,
+   "data": {
+    "court": "Chief Magistrate and District Courts (Metropolis)",
+    "judge": "",
+    "file": ""
+   }
+  },
+  {
+   "title": "Magistrate Court 16",
+   "order": 116,
+   "data": {
+    "court": "Chief Magistrate and District Courts (Metropolis)",
+    "judge": "",
+    "file": ""
+   }
+  },
+  {
+   "title": "Gombe Appeals",
+   "order": 200,
+   "data": {
+    "court": "Appeal Sessions",
+    "judge": "",
+    "file": "/assets/pdf/cause_lists/appeals/gombe.pdf"
+   }
+  },
+  {
+   "title": "Dukku Appeals",
+   "order": 201,
+   "data": {
+    "court": "Appeal Sessions",
+    "judge": "",
+    "file": ""
+   }
+  },
+  {
+   "title": "Kaltungo Appeals",
+   "order": 202,
+   "data": {
+    "court": "Appeal Sessions",
+    "judge": "",
+    "file": ""
+   }
+  }
+ ],
+ "notices": [
+  {
+   "title": "High Court 4 will not be sitting from Jan 5th \u2013 Jan 7th, 202",
+   "data": {
+    "label": "URGENT",
+    "message": "High Court 4 will not be sitting from Jan 5th \u2013 Jan 7th, 2026."
+   }
+  },
+  {
+   "title": "Magistrate Court 10: All matters for Jan 8th adjourned to Ja",
+   "data": {
+    "label": "ADJOURNMENT",
+    "message": "Magistrate Court 10: All matters for Jan 8th adjourned to Jan 12th."
+   }
+  },
+  {
+   "title": "Kaltungo Division Appeal Session begins Monday, Feb 2nd.",
+   "data": {
+    "label": "APPEAL",
+    "message": "Kaltungo Division Appeal Session begins Monday, Feb 2nd."
+   }
+  }
+ ],
+ "pages": [
+  {
+   "slug": "about",
+   "legacy": [
+    "/about.html"
+   ],
+   "title": "ABOUT US",
+   "data": {
+    "subtitle": "Gombe State High Court of Justice",
+    "body": "<section class=\"py-5 mt-4\">\n        <div class=\"container\">\n            <div class=\"row g-4 justify-content-center text-center\">\n                <div class=\"col-md-4\">\n                    <div class=\"identity-card p-4 shadow-sm h-100\">\n                        <i class=\"fas fa-landmark fa-3x mb-3\" style=\"color: var(--court-green);\"></i>\n                        <h4 class=\"fw-bold\">Established</h4>\n                        <p class=\"text-muted\">Established as a Superior Court of Record following the creation of Gombe State in 1996, under Section 270 of the 1999 Constitution.</p>\n                    </div>\n                </div>\n                <div class=\"col-md-4\">\n                    <div class=\"identity-card p-4 shadow-sm h-100\">\n                        <i class=\"fas fa-balance-scale fa-3x mb-3\" style=\"color: var(--court-green);\"></i>\n                        <h4 class=\"fw-bold\">Our Mission</h4>\n                        <p class=\"text-muted\">To ensure an efficient and transparent administration of justice through the rule of law and judicial independence.</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </section>\n<section class=\"py-5 bg-light\">\n        <div class=\"container\">\n            <div class=\"row mb-5\">\n                <div class=\"col-lg-8\">\n                    <h2 class=\"fw-bold\" style=\"color: var(--court-green);\">Constitutional Mandate</h2>\n                    <p class=\"text-muted\">The High Court of Justice is a key component of the Gombe State Judiciary. While the Judiciary encompasses all courts in the state, the High Court exercises original and appellate jurisdiction as defined by law.</p>\n                </div>\n            </div>\n\n            \n\n            <div class=\"row g-4\">\n                <div class=\"col-md-6\">\n                    <div class=\"jurisdiction-box\">\n                        <h5 class=\"fw-bold text-success\">Original Jurisdiction</h5>\n                        <p class=\"small text-dark\">The Court has the power to hear and determine any civil proceedings in which the existence or extent of a legal right, power, duty, liability, privilege, interest, obligation or claim is in issue. It also handles serious criminal matters.</p>\n                    </div>\n                </div>\n                <div class=\"col-md-6\">\n                    <div class=\"jurisdiction-box\">\n                        <h5 class=\"fw-bold text-success\">Appellate Jurisdiction</h5>\n                        <p class=\"small text-dark\">We serve as a vital link in the justice chain by hearing appeals from the Magistrates\u2019 Courts. This ensures that every citizen has the right to a fair review of lower court decisions.</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </section>\n<section class=\"py-5 bg-white\">\n    <div class=\"container\">\n        <div class=\"row align-items-center\">\n            <div class=\"col-lg-6\">\n                <h2 class=\"fw-bold\" style=\"color: var(--court-green);\">Administrative Leadership</h2>\n                <p class=\"text-muted\">Beyond the bench, the High Court is supported by a robust administrative framework led by the Chief Registrar.</p>\n                <ul class=\"list-unstyled\">\n                    <li class=\"mb-3 d-flex align-items-start\">\n                        <i class=\"fas fa-check-circle text-success mt-1 me-3\"></i>\n                        <div>\n                            <strong>The Chief Registrar:</strong>\n                            <p class=\"small text-muted mb-0\">The Chief Accounting Officer and head of administration for the High Court.</p>\n                        </div>\n                    </li>\n                    <li class=\"mb-3 d-flex align-items-start\">\n                        <i class=\"fas fa-check-circle text-success mt-1 me-3\"></i>\n                        <div>\n                            <strong>The Probate Registry:</strong>\n                            <p class=\"small text-muted mb-0\">Responsible for the administration of estates, wills, and letters of administration.</p>\n                        </div>\n                    </li>\n                    <li class=\"mb-3 d-flex align-items-start\">\n                        <i class=\"fas fa-check-circle text-success mt-1 me-3\"></i>\n                        <div>\n                            <strong>The Litigation Department:</strong>\n                            <p class=\"small text-muted mb-0\">Manages the filing, processing, and archiving of all court processes.</p>\n                        </div>\n                    </li>\n                </ul>\n            </div>\n            <div class=\"col-lg-6\">\n                <div class=\"p-4 rounded border-dashed border-2 text-center\" style=\"border: 2px dashed #ccc; background-color: #fcfcfc;\">\n                    <i class=\"fas fa-sitemap fa-4x mb-3 opacity-25\"></i>\n                    <h5 class=\"text-muted\">Institutional Hierarchy</h5>\n                    <p class=\"small text-secondary\">The Gombe State High Court operates under a structured hierarchy ensuring accountability at every level of the registry and judicial staff.</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"py-5 bg-white\">\n    <div class=\"container\">\n        <div class=\"text-center mb-5\">\n            <h2 class=\"fw-bold\" style=\"color: var(--court-green);\">Our History &amp; Evolution</h2>\n            <p class=\"text-muted\">A legacy of justice since the creation of Gombe State.</p>\n        </div>\n        \n        <div class=\"row\">\n            <div class=\"col-lg-10 mx-auto\">\n                <div class=\"d-flex mb-4\">\n                    <div class=\"flex-shrink-0 text-center\" style=\"width: 80px;\">\n                        <h5 class=\"fw-bold mb-0\" style=\"color: var(--court-gold);\">1996</h5>\n                        <div class=\"vr h-100 mt-2\" style=\"width: 2px; background-color: var(--court-gold);\"></div>\n                    </div>\n                    <div class=\"ms-4 pb-4\">\n                        <h5 class=\"fw-bold\">Establishment</h5>\n                        <p class=\"text-muted\">Following the creation of Gombe State by the then Federal Military Government, the High Court of Justice was established to provide a superior court of record for the new state.</p>\n                    </div>\n                </div>\n\n                <div class=\"d-flex mb-4\">\n                    <div class=\"flex-shrink-0 text-center\" style=\"width: 80px;\">\n                        <h5 class=\"fw-bold mb-0\" style=\"color: var(--court-gold);\">1999</h5>\n                        <div class=\"vr h-100 mt-2\" style=\"width: 2px; background-color: var(--court-gold);\"></div>\n                    </div>\n                    <div class=\"ms-4 pb-4\">\n                        <h5 class=\"fw-bold\">Constitutional Transition</h5>\n                        <p class=\"text-muted\">The court transitioned under the 1999 Constitution of the Federal Republic of Nigeria, solidifying its status under Section 270 as a pillar of the state's democracy.</p>\n                    </div>\n                </div>\n\n                <div class=\"d-flex\">\n                    <div class=\"flex-shrink-0 text-center\" style=\"width: 80px;\">\n                        <h5 class=\"fw-bold mb-0\" style=\"color: var(--court-gold);\">Present</h5>\n                    </div>\n                    <div class=\"ms-4\">\n                        <h5 class=\"fw-bold\">Digital Transformation</h5>\n                        <p class=\"text-muted\">Today, the High Court continues to expand with multiple judicial divisions across the state, integrating technology to enhance the speed of justice delivery.</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"py-5 bg-light\">\n    <div class=\"container\">\n        <div class=\"text-center mb-5\">\n            <h2 class=\"fw-bold\" style=\"color: var(--court-green);\">Roll of Honor</h2>\n            <p class=\"text-muted\">Distinguished Past &amp; Present Chief Judges of Gombe State High Court</p>\n        </div>\n\n        <div class=\"row row-cols-1 row-cols-md-3 g-4\">\n            <div class=\"col\">\n                <div class=\"card h-100 border-0 shadow-sm p-3\">\n                    <div class=\"d-flex align-items-center\">\n                        <div class=\"rounded-circle bg-success text-white d-flex align-items-center justify-content-center\" style=\"width: 50px; height: 50px;\">\n                            <i class=\"fas fa-gavel\"></i>\n                        </div>\n                        <div class=\"ms-3\">\n                            <h6 class=\"mb-0 fw-bold\">Hon. Justice [Name]</h6>\n                            <small class=\"text-gold fw-bold\" style=\"color: var(--court-gold);\">1996 - 2005</small>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"col\">\n                <div class=\"card h-100 border-0 shadow-sm p-3\">\n                    <div class=\"d-flex align-items-center\">\n                        <div class=\"rounded-circle bg-success text-white d-flex align-items-center justify-content-center\" style=\"width: 50px; height: 50px;\">\n                            <i class=\"fas fa-gavel\"></i>\n                        </div>\n                        <div class=\"ms-3\">\n                            <h6 class=\"mb-0 fw-bold\">Hon. Justice [Name]</h6>\n                            <small class=\"text-gold fw-bold\" style=\"color: var(--court-gold);\">2005 - 2018</small>\n                        </div>\n                    </div>\n                </div>\n            </div>\n\n            <div class=\"col\">\n                <div class=\"card h-100 border-0 shadow-sm p-3 border-start border-4 border-warning\">\n                    <div class=\"d-flex align-items-center\">\n                        <div class=\"rounded-circle bg-dark text-white d-flex align-items-center justify-content-center\" style=\"width: 50px; height: 50px; background-color: var(--court-green) !important;\">\n                            <i class=\"fas fa-star\" style=\"color: var(--court-gold);\"></i>\n                        </div>\n                        <div class=\"ms-3\">\n                            <h6 class=\"mb-0 fw-bold\">Hon. Justice H. S. Mohammed</h6>\n                            <small class=\"text-success fw-bold\">2018 - Present</small>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section class=\"py-5\">\n    <div class=\"container\">\n        <h3 class=\"fw-bold mb-4\" style=\"color: var(--court-green);\">Our Judicial Divisions</h3>\n        <div class=\"row text-center\">\n            <div class=\"col-6 col-md-3 mb-3\">\n                <div class=\"p-3 border rounded shadow-sm bg-white\">\n                    <h6 class=\"mb-0 fw-bold\">Gombe (Hqtrs)</h6>\n                </div>\n            </div>\n            <div class=\"col-6 col-md-3 mb-3\">\n                <div class=\"p-3 border rounded shadow-sm bg-white\">\n                    <h6 class=\"mb-0 fw-bold\">Kaltungo</h6>\n                </div>\n            </div>\n            <div class=\"col-6 col-md-3 mb-3\">\n                <div class=\"p-3 border rounded shadow-sm bg-white\">\n                    <h6 class=\"mb-0 fw-bold\">Billiri</h6>\n                </div>\n            </div>\n            <div class=\"col-6 col-md-3 mb-3\">\n                <div class=\"p-3 border rounded shadow-sm bg-white\">\n                    <h6 class=\"mb-0 fw-bold\">Bajoga</h6>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+    "banner": ""
+   }
+  },
+  {
+   "slug": "small-claims",
+   "legacy": [
+    "/small_claims.html"
+   ],
+   "title": "Small Claims Court",
+   "data": {
+    "subtitle": "Fast, Informal, and Inexpensive Access to Justice",
+    "body": "<nav class=\"sub-nav shadow-sm d-none d-md-block\">\n        <div class=\"container\">\n            <ul class=\"nav justify-content-center\">\n                <li class=\"nav-item\"><a class=\"nav-link\" href=\"#eligibility\"><i class=\"fas fa-tasks me-1\"></i> Eligibility</a></li>\n                <li class=\"nav-item\"><a class=\"nav-link\" href=\"#process\"><i class=\"fas fa-project-diagram me-1\"></i> The Process</a></li>\n                <li class=\"nav-item\"><a class=\"nav-link\" href=\"#forms\"><i class=\"fas fa-file-download me-1\"></i> Forms &amp; Reports</a></li>\n                <li class=\"nav-item\"><a class=\"nav-link\" href=\"#courts\"><i class=\"fas fa-map-marker-alt me-1\"></i> Designated Courts</a></li>\n            </ul>\n        </div>\n    </nav>\n<section class=\"py-5 bg-white border-bottom\">\n    <div class=\"container\">\n        <div class=\"row align-items-center\">\n            <div class=\"col-lg-6\">\n                <h2 class=\"fw-bold mb-4\" style=\"color: var(--court-green);\">What is the Small Claims Court?</h2>\n                <p class=\"text-muted\">The Small Claims Court is a specialized magisterial court designed to provide a <strong>fast, informal, and inexpensive</strong> way to resolve liquidated money disputes (debts) not exceeding \u20a63,000,000. The entire process is strictly time-bound to ensure judgment is delivered within 60 days.</p>\n                \n                <h5 class=\"fw-bold mt-4\"><i class=\"fas fa-edit text-success me-2\"></i> How to File a Case:</h5>\n                <ol class=\"text-muted ps-3\">\n                    <li class=\"mb-2\"><strong>Issue Demand:</strong> Serve the debtor with Form SCA 1 and wait 7 days.</li>\n                    <li class=\"mb-2\"><strong>File Complaint:</strong> If unpaid, visit the Registry with Form SCA 2 and your evidence.</li>\n                    <li class=\"mb-2\"><strong>Pay Fees:</strong> Pay the prescribed filing fees at the designated bank or point.</li>\n                    <li><strong>Await Service:</strong> The Court Sheriff will serve the Summons on the defendant.</li>\n                </ol>\n            </div>\n            <div class=\"col-lg-6\">\n                <div class=\"p-4 rounded shadow-sm\" style=\"background-color: #fffdec; border: 1px solid var(--court-gold);\">\n                    <h5 class=\"fw-bold\"><i class=\"fas fa-info-circle me-2\"></i> Key Requirements</h5>\n                    <hr>\n                    <ul class=\"list-unstyled mb-0\">\n                        <li class=\"mb-2\"><i class=\"fas fa-check text-success me-2\"></i> Maximum Claim: <strong>\u20a63,000,000</strong></li>\n                        <li class=\"mb-2\"><i class=\"fas fa-check text-success me-2\"></i> Claim Type: <strong>Liquidated Money (Debts/Damages)</strong></li>\n                        <li class=\"mb-2\"><i class=\"fas fa-check text-success me-2\"></i> Parties: <strong>Must live or do business in Gombe State</strong></li>\n                        <li><i class=\"fas fa-check text-success me-2\"></i> Timeline: <strong>60-Day Fast-Track</strong></li>\n                    </ul>\n                </div>\n            </div>\n        </div>\n    </div>\n    </section>\n<section id=\"eligibility\" class=\"py-5\">\n        <div class=\"container text-center\">\n            <div class=\"row justify-content-center\">\n                <div class=\"col-md-7 quiz-card p-5 shadow-sm\">\n                    <h3 class=\"fw-bold mb-4\">Are you eligible?</h3>\n                    <p class=\"text-muted\">This court handles simple debt recovery and liquidated damages cases.</p>\n                    <div id=\"quizContent\">\n                        <h5 class=\"mb-4\">Is your claim for money only, and is it \u20a63,000,000 or less?</h5>\n                        <button class=\"btn btn-success btn-lg px-5 me-2\" onclick=\"quizResult(true)\">Yes</button>\n                        <button class=\"btn btn-outline-danger btn-lg px-5\" onclick=\"quizResult(false)\">No</button>\n                    </div>\n                    <div id=\"resultArea\" class=\"mt-4 d-none\"></div>\n                </div>\n            </div>\n        </div>\n    </section>\n<section id=\"fees\" class=\"py-5 bg-white border-top\">\n    <div class=\"container\">\n        <div class=\"row align-items-center\">\n            <div class=\"col-lg-5\">\n                <h3 class=\"fw-bold\" style=\"color: var(--court-green);\">Know Your Fees</h3>\n                <p class=\"text-muted\">The Gombe State Small Claims Court is designed to be affordable. Below is a summary of the standardized filing costs in accordance with the current Practice Direction.</p>\n                <div class=\"alert alert-info small\">\n                    <i class=\"fas fa-info-circle me-2\"></i> \n                    <strong>Note:</strong> All payments must be made at the designated bank gallery within the Court Complex or via the official E-Payment portal.\n                </div>\n            </div>\n            <div class=\"col-lg-7\">\n                <div class=\"table-responsive shadow-sm\">\n                    <table class=\"table table-hover border mb-0\">\n                        <thead class=\"table-light\">\n                            <tr>\n                                <th>Service Item</th>\n                                <th class=\"text-end\">Fee (\u20a6)</th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            <tr>\n                                <td>Filing Fee (Claims up to \u20a61,000,000)</td>\n                                <td class=\"text-end fw-bold\">1,000.00</td>\n                            </tr>\n                            <tr>\n                                <td>Filing Fee (Claims \u20a61,000,001 - \u20a65,000,000)</td>\n                                <td class=\"text-end fw-bold\">2,500.00</td>\n                            </tr>\n                            <tr>\n                                <td>Service of Process (Per Party within jurisdiction)</td>\n                                <td class=\"text-end fw-bold\">500.00</td>\n                            </tr>\n                            <tr>\n                                <td>Certificate of Judgment / Order</td>\n                                <td class=\"text-end fw-bold\">500.00</td>\n                            </tr>\n                            <tr class=\"table-success\">\n                                <td class=\"fw-bold\">Administrative/Hearing Fee</td>\n                                <td class=\"text-end fw-bold\">Free</td>\n                            </tr>\n                        </tbody>\n                    </table>\n                </div>\n                <small class=\"text-muted mt-2 d-block\">* Fees are subject to periodic review by the Honorable Chief Judge.</small>\n            </div>\n        </div>\n    </div>\n</section>\n<section id=\"process\" class=\"py-5 bg-white\">\n        <div class=\"container\">\n            <div class=\"text-center mb-5\">\n                <h2 class=\"fw-bold\" style=\"color: var(--court-green);\">From Demand to Judgment</h2>\n                <p class=\"text-muted\">The Small Claims process is designed to be completed within 60 days.</p>\n            </div>\n            <div class=\"row g-4\">\n                <div class=\"col-md\">\n                    <div class=\"step-card text-center\">\n                        <div class=\"step-number\">1</div>\n                        <h6>Letter of Demand</h6>\n                        <p class=\"small text-muted\">Claimant serves a formal demand (Form SCA 1) on the Defendant.</p>\n                    </div>\n                </div>\n                <div class=\"col-md\">\n                    <div class=\"step-card text-center\">\n                        <div class=\"step-number\">2</div>\n                        <h6>Filing Claim</h6>\n                        <p class=\"small text-muted\">If no payment in 7 days, file Form SCA 2 at the Registry.</p>\n                    </div>\n                </div>\n                <div class=\"col-md\">\n                    <div class=\"step-card text-center\">\n                        <div class=\"step-number\">3</div>\n                        <h6>Service</h6>\n                        <p class=\"small text-muted\">Sheriff serves the summons on the Defendant within 7 days.</p>\n                    </div>\n                </div>\n                <div class=\"col-md\">\n                    <div class=\"step-card text-center\">\n                        <div class=\"step-number\">4</div>\n                        <h6>Trial/Hearing</h6>\n                        <p class=\"small text-muted\">Trial is conducted daily or weekly with minimal adjournments.</p>\n                    </div>\n                </div>\n                <div class=\"col-md\">\n                    <div class=\"step-card text-center\">\n                        <div class=\"step-number\">5</div>\n                        <h6>Judgment</h6>\n                        <p class=\"small text-muted\">Delivered within 14 days of the conclusion of the hearing.</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </section>\n<section id=\"defendants\" class=\"py-5 bg-white border-top\">\n    <div class=\"container\">\n        <div class=\"row align-items-center\">\n            <div class=\"col-lg-7\">\n                <h3 class=\"fw-bold\" style=\"color: #b22222;\">Served with a Summons?</h3>\n                <p class=\"text-muted\">If you have been served with a Small Claims Summons, you are the <strong>Defendant</strong>. You must act quickly\u2014usually within <strong>7 days</strong>\u2014to prevent a judgment being entered against you in your absence.</p>\n                \n                <div class=\"row g-3 mt-3\">\n                    <div class=\"col-md-6\">\n                        <div class=\"p-3 border rounded h-100 bg-light\">\n                            <h6 class=\"fw-bold text-dark\"><i class=\"fas fa-handshake me-2 text-success\"></i> Admission</h6>\n                            <p class=\"small text-muted mb-0\">If you owe the money, you can admit the claim and suggest a payment plan using <strong>Form SCA 5</strong>.</p>\n                        </div>\n                    </div>\n                    <div class=\"col-md-6\">\n                        <div class=\"p-3 border rounded h-100 bg-light\">\n                            <h6 class=\"fw-bold text-dark\"><i class=\"fas fa-shield-alt me-2 text-primary\"></i> Defense</h6>\n                            <p class=\"small text-muted mb-0\">If you dispute the claim, file a <strong>Points of Defense</strong> explaining why you do not owe the money.</p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            \n            <div class=\"col-lg-5\">\n                <div class=\"card border-0 shadow-sm mt-4 mt-lg-0\" style=\"background-color: #fff5f5; border-left: 5px solid #b22222 !important;\">\n                    <div class=\"card-body p-4\">\n                        <h5 class=\"fw-bold\" style=\"color: #b22222;\">Common Legal Defenses</h5>\n                        <ul class=\"list-unstyled small mb-0\">\n                            <li class=\"mb-2\"><i class=\"fas fa-arrow-right me-2 text-danger\"></i> <strong>Debt Already Paid:</strong> You have proof of payment (receipts/transfers).</li>\n                            <li class=\"mb-2\"><i class=\"fas fa-arrow-right me-2 text-danger\"></i> <strong>Statute of Barred:</strong> The debt is too old to be legally enforced.</li>\n                            <li class=\"mb-2\"><i class=\"fas fa-arrow-right me-2 text-danger\"></i> <strong>Goods/Services Not Delivered:</strong> The contract was never fulfilled by the claimant.</li>\n                            <li class=\"mb-2\"><i class=\"fas fa-arrow-right me-2 text-danger\"></i> <strong>Wrong Defendant:</strong> You are not the person who entered the agreement.</li>\n                            <li><i class=\"fas fa-arrow-right me-2 text-danger\"></i> <strong>Counter-Claim:</strong> The claimant actually owes *you* money.</li>\n                        </ul>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>\n<section id=\"forms\" class=\"py-5 bg-light\">\n        <div class=\"container\">\n            <div class=\"row g-4\">\n                <div class=\"col-lg-6\">\n                    <div class=\"card h-100 shadow-sm border-0\">\n                        <div class=\"card-header bg-success text-white fw-bold py-3\"><i class=\"fas fa-file-pdf me-2\"></i>Official SCC Forms</div>\n                        <div class=\"card-body\">\n                            <ul class=\"list-group list-group-flush\">\n                                <li class=\"list-group-item d-flex justify-content-between\">Form SCC 1: Letter of Demand <a href=\"/assets/pdf/scc/form-1-small-claims-court-of-gombe-state.pdf\" class=\"text-success fw-bold\">Download</a></li>\n                                <li class=\"list-group-item d-flex justify-content-between\">Form SCC 2: Complaint Form <a href=\"#\" class=\"text-success fw-bold\">Download</a></li>\n                                <li class=\"list-group-item d-flex justify-content-between\">Form SCC 3: Summons <a href=\"#\" class=\"text-success fw-bold\">Download</a></li>\n                                <li class=\"list-group-item d-flex justify-content-between\">Form SCC 5: Counter-Claim <a href=\"#\" class=\"text-success fw-bold\">Download</a></li>\n                            </ul>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"col-lg-6\">\n                    <div class=\"card h-100 shadow-sm border-0\">\n                        <div class=\"card-header text-white fw-bold py-3\" style=\"background-color: var(--court-gold);\"><i class=\"fas fa-chart-bar me-2\"></i>Performance &amp; Execution Reports</div>\n                        <div class=\"card-body\">\n                            <ul class=\"list-group list-group-flush\">\n                                <li class=\"list-group-item d-flex justify-content-between\">2025 Annual Performance Report <a href=\"#\" class=\"text-dark\">View PDF</a></li>\n                                <li class=\"list-group-item d-flex justify-content-between\">Record of Satisfied Judgments <a href=\"#\" class=\"text-dark\">View PDF</a></li>\n                                <li class=\"list-group-item d-flex justify-content-between\">Quarterly Execution Statistics <a href=\"#\" class=\"text-dark\">View PDF</a></li>\n                            </ul>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </section>\n<section id=\"legal-framework\" class=\"py-5 bg-light border-top border-bottom\">\n    <div class=\"container\">\n        <div class=\"text-center mb-5\">\n            <h2 class=\"fw-bold\" style=\"color: var(--court-green);\">Legal Framework</h2>\n            <p class=\"text-muted\">The Small Claims Court operates under specific rules issued by the Honorable Chief Judge.</p>\n        </div>\n\n        <div class=\"row justify-content-center\">\n            <div class=\"col-md-10\">\n                <div class=\"card border-0 shadow-sm overflow-hidden\">\n                    <div class=\"row g-0\">\n                        <div class=\"col-md-4 d-flex align-items-center justify-content-center bg-dark text-white p-4\">\n                            <i class=\"fas fa-book-reader fa-4x text-warning\"></i>\n                        </div>\n                        <div class=\"col-md-8\">\n                            <div class=\"card-body p-4\">\n                                <h4 class=\"fw-bold\">Gombe State SCC Practice Direction</h4>\n                                <p class=\"text-muted small\">This document outlines the procedures, timelines, and mandatory forms required for all Small Claims proceedings in the state.</p>\n                                <div class=\"d-flex gap-2\">\n                                    <a href=\"/assets/pdf/scc/revised-practice-direction-for-small-claims.pdf\" target=\"_blank\" class=\"btn btn-outline-success\">\n                                        <i class=\"fas fa-eye me-2\"></i>View Online\n                                    </a>\n                                    <a href=\"/assets/pdf/scc/revised-practice-direction-for-small-claims.pdf\" download=\"\" class=\"btn btn-success\">\n                                        <i class=\"fas fa-download me-2\"></i>Download PDF\n                                    </a>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n    </section>\n<section id=\"courts\" class=\"py-5 bg-white\">\n        <div class=\"container\">\n            <h3 class=\"fw-bold mb-4\" style=\"color: var(--court-green);\">Designated Small Claims Courts</h3>\n            <div class=\"table-responsive\">\n                <table class=\"table table-bordered table-scc shadow-sm\">\n                    <thead>\n                        <tr>\n                            <th>Location/LGA</th>\n                            <th>Designated Court Room</th>\n                            <th>Status</th>\n                        </tr>\n                    </thead>\n                    <tbody class=\"bg-white\">\n                        <tr><td>Gombe Metropolis (I)</td><td>Magistrate Court 1</td><td><span class=\"badge bg-success\">Active</span></td></tr>\n                        <tr><td>Gombe Metropolis (II)</td><td>Magistrate Court 4</td><td><span class=\"badge bg-success\">Active</span></td></tr>\n                        <tr><td>Akko LGA</td><td>Magistrate Court, Kumo</td><td><span class=\"badge bg-success\">Active</span></td></tr>\n                        <tr><td>Balanga LGA</td><td>Magistrate Court, Talasse</td><td><span class=\"badge bg-success\">Active</span></td></tr>\n                        <tr><td>Billiri LGA</td><td>Magistrate Court, Billiri</td><td><span class=\"badge bg-success\">Active</span></td></tr>\n                        <tr><td>Dukku LGA</td><td>Magistrate Court, Dukku</td><td><span class=\"badge bg-success\">Active</span></td></tr>\n                        <tr><td>Funakaye LGA</td><td>Magistrate Court, Bajoga</td><td><span class=\"badge bg-success\">Active</span></td></tr>\n                        <tr><td>Kaltungo LGA</td><td>Magistrate Court, Kaltungo</td><td><span class=\"badge bg-success\">Active</span></td></tr>\n                        <tr><td>Kwami LGA</td><td>Magistrate Court, Mallam Sidi</td><td><span class=\"badge bg-success\">Active</span></td></tr>\n                        <tr><td>Nafada LGA</td><td>Magistrate Court, Nafada</td><td><span class=\"badge bg-success\">Active</span></td></tr>\n                        <tr><td>Shongom LGA</td><td>Magistrate Court, Boh</td><td><span class=\"badge bg-success\">Active</span></td></tr>\n                        <tr><td>Yamaltu/Deba LGA</td><td>Magistrate Court, Deba</td><td><span class=\"badge bg-success\">Active</span></td></tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </section>",
+    "banner": ""
+   }
+  },
+  {
+   "slug": "e-filing",
+   "legacy": [
+    "/e-filing.html"
+   ],
+   "title": "The Future of Filing is Coming",
+   "data": {
+    "subtitle": "",
+    "body": "\n        <div class=\"container\">\n            <span class=\"badge rounded-pill bg-warning text-dark px-3 py-2 mb-3 fw-bold\">UNDER DEVELOPMENT</span>\n            \n            <p class=\"lead mb-4 mx-auto\" style=\"max-width: 700px;\">\n                The Gombe State High Court is currently developing a secure, end-to-end <strong>e-Filing System</strong> to enable lawyers and litigants to file court processes electronically from anywhere in the world.\n            </p>\n            \n            <div class=\"row justify-content-center\">\n                <div class=\"col-md-6\">\n                    <p class=\"small text-uppercase mb-2 opacity-75\">Development Progress</p>\n                    <div class=\"progress\" style=\"height: 10px; background: rgba(255,255,255,0.2);\">\n                        <div class=\"progress-bar progress-bar-striped progress-bar-animated\" style=\"width: 75%\"></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    \n<section class=\"py-5\">\n        <div class=\"container\">\n            <div class=\"text-center mb-5\">\n                <h2 class=\"fw-bold\" style=\"color: var(--court-green);\">What to Expect</h2>\n                <hr class=\"mx-auto\" style=\"width: 60px; height: 3px; background: var(--court-gold); opacity: 1;\">\n            </div>\n            \n            <div class=\"row g-4\">\n                <div class=\"col-md-4 text-center\">\n                    <div class=\"feature-icon\"><i class=\"fas fa-cloud-upload-alt\"></i></div>\n                    <h5 class=\"fw-bold\">24/7 Remote Filing</h5>\n                    <p class=\"text-muted small\">Submit your court processes and motions at any time, including weekends and holidays.</p>\n                </div>\n                <div class=\"col-md-4 text-center\">\n                    <div class=\"feature-icon\"><i class=\"fas fa-credit-card\"></i></div>\n                    <h5 class=\"fw-bold\">Online Payment</h5>\n                    <p class=\"text-muted small\">Integrated Remita and card payments for immediate assessment and receipting.</p>\n                </div>\n                <div class=\"col-md-4 text-center\">\n                    <div class=\"feature-icon\"><i class=\"fas fa-bell\"></i></div>\n                    <h5 class=\"fw-bold\">Instant Notifications</h5>\n                    <p class=\"text-muted small\">Receive SMS and Email alerts once your processes are approved or assigned a suit number.</p>\n                </div>\n            </div>\n        </div>\n    </section>",
+    "banner": ""
+   }
+  }
+ ],
+ "settings": {
+  "hero": {
+   "kicker": "WELCOME TO THE OFFICIAL WEBSITE OF",
+   "title": "HIGH COURT OF JUSTICE, GOMBE STATE",
+   "motto": "Integrity and Efficient Justice Delivery."
+  },
+  "cj": {
+   "img": "/assets/img/judges/cj2.jpeg",
+   "quote": "The Gombe State High Court of Justice is committed to the protection of fundamental human rights and the preservation of the rule of law. We are continuously evolving to meet the demands of a modern legal system.",
+   "paras": [
+    "I warmly welcome you to the official website of the High Court of Justice, Gombe State. This platform reflects our commitment to transparency, efficiency, and improved access to justice through the responsible use of technology.",
+    "I encourage you to explore this website for relevant information on the Court\u2019s structure, services, and activities, and to engage with the Judiciary in a manner that promotes justice and public confidence.",
+    "As the head of the Gombe State High Court and the Chairman of the State Judicial Service Commission, my focus remains on ensuring that our court divisions remain accessible, efficient, and technologically driven."
+   ],
+   "name": "Hon. Justice Halima S. Mohammed",
+   "title": "Chief Judge, Gombe State"
+  },
+  "about": {
+   "title": "About the Gombe State High Court",
+   "text": "The Gombe State High Court of Justice stands as the beacon of legal authority in the state. Established to adjudicate matters within its jurisdiction, the court is committed to the principles of fairness, transparency, and the speedy administration of justice. Under the leadership of the Honorable Chief Judge, we strive to make justice accessible to all citizens.",
+   "img": "/assets/img/logos/hammer.jpg"
+  },
+  "scc": {
+   "title": "Need to recover a debt quickly?",
+   "lead": "The Small Claims Court provides a fast-track process for liquidated money demands not exceeding <strong>\u20a63,000,000</strong>.",
+   "bullets": [
+    "Judgment within 60 days",
+    "Simplified filing process",
+    "Low cost of litigation"
+   ]
+  },
+  "contact": {
+   "address": "High Court Complex, Bauchi Road, Gombe, Gombe State, Nigeria.",
+   "phone": "+234 803 000 0000",
+   "email": "info@gombehighcourt.gov.ng"
+  },
+  "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15704.148118029511!2d11.162788!3d10.279841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10f606e300000001%3A0x633d7b43f11904e9!2sGombe%20High%20Court!5e0!3m2!1sen!2sng!4v1710000000000!5m2!1sen!2sng",
+  "footerAbout": "Ensuring the supremacy of the law and protecting the fundamental rights of every citizen. The Court remains the last hope of the common man.",
+  "socials": {
+   "facebook": "https://facebook.com/gombejudiciary",
+   "twitter": "https://twitter.com/gombejudiciary",
+   "youtube": "https://youtube.com/@gombejudiciary"
+  },
+  "eAffidavit": "https://portal.judiciary.gm.gov.ng",
+  "intros": {
+   "gallery": "A glimpse into the ceremonies, infrastructures, and milestones of the Gombe State Judiciary. These moments capture our commitment to excellence and the solemnity of the law.",
+   "directorates": "The administrative pillars supporting the judicial process.",
+   "honours": "Distinguished jurists who have shaped the Gombe State Judiciary since its inception."
+  },
+  "causeListUpdated": "DECEMBER 31, 2025"
+ },
+ "_missingAssets": [
+  "assets/director_ict.jpg",
+  "assets/director_placeholder.jpg",
+  "assets/director_process.jpg",
+  "assets/director_rps.jpg",
+  "assets/img/past-cr/cr1.jpg",
+  "assets/img/past-cr/cr2.jpg",
+  "assets/img/past-cr/cr4.jpg",
+  "assets/img/past-cr/cr5.jpg",
+  "assets/past_cj_3.jpg",
+  "assets/pdf/appeal_dukku.pdf",
+  "assets/pdf/appeal_kaltungo.pdf",
+  "assets/pdf/hc1.pdf",
+  "assets/pdf/hc2.pdf",
+  "assets/pdf/hc3.pdf",
+  "assets/pdf/hc4.pdf",
+  "assets/pdf/hc5.pdf",
+  "assets/pdf/hc6.pdf",
+  "assets/pdf/hc7.pdf",
+  "assets/pdf/hc8.pdf",
+  "assets/pdf/hc9.pdf",
+  "assets/pdf/judgments/case2.pdf",
+  "assets/pdf/judgments/case3.pdf",
+  "assets/pdf/mc1.pdf",
+  "assets/pdf/mc10.pdf",
+  "assets/pdf/mc11.pdf",
+  "assets/pdf/mc12.pdf",
+  "assets/pdf/mc13.pdf",
+  "assets/pdf/mc14.pdf",
+  "assets/pdf/mc15.pdf",
+  "assets/pdf/mc16.pdf",
+  "assets/pdf/mc2.pdf",
+  "assets/pdf/mc3.pdf",
+  "assets/pdf/mc4.pdf",
+  "assets/pdf/mc5.pdf",
+  "assets/pdf/mc6.pdf",
+  "assets/pdf/mc7.pdf",
+  "assets/pdf/mc8.pdf",
+  "assets/pdf/mc9.pdf"
+ ]
+}

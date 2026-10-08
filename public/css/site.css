@@ -1,0 +1,198 @@
+/* Gombe State High Court: public site styles (merged from the original pages) */
+:root {
+  --court-green: #004d00;
+  --court-green-2: #28a745;
+  --court-red: #8b0000;
+  --court-gold: #c5a059;
+  --court-gold-bright: #D4AF37;
+  --light-bg: #f8f9fa;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  padding-top: 75px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #333;
+  background: #fff;
+}
+a { color: var(--court-green); }
+.page-body { min-height: 50vh; }
+
+/* ---------- Navigation ---------- */
+.navbar {
+  background-color: var(--court-green) !important;
+  border-bottom: 3px solid var(--court-gold-bright) !important;
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.6);
+}
+.navbar-brand, .navbar .nav-link { color: #fff !important; }
+.navbar .nav-link:hover, .navbar .nav-link.active, .navbar .dropdown:hover > .nav-link { color: var(--court-gold-bright) !important; }
+.navbar .nav-link.active { border-bottom: 2px solid var(--court-gold-bright); }
+.navbar-toggler { border-color: rgba(255,255,255,.5); }
+.navbar-toggler-icon { filter: invert(1); }
+.navbar .dropdown-menu {
+  background-color: var(--court-green);
+  border: 1px solid var(--court-gold-bright);
+  border-top: 3px solid var(--court-red);
+  max-height: 360px; overflow-y: auto; overflow-x: hidden;
+  border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+.navbar .dropdown-item { color: #fff !important; padding: 10px 20px; transition: all .3s ease; white-space: normal; }
+.navbar .dropdown-item:hover, .navbar .dropdown-item:focus, .navbar .dropdown-item.active { background-color: var(--court-gold-bright) !important; color: var(--court-green) !important; }
+.navbar .dropdown-menu::-webkit-scrollbar { width: 6px; }
+.navbar .dropdown-menu::-webkit-scrollbar-thumb { background: var(--court-gold-bright); border-radius: 10px; }
+@media (min-width: 992px) { .navbar .dropdown:hover > .dropdown-menu { display: block; margin-top: 0; } }
+.cta-btn {
+  background-color: var(--court-red); color: #fff !important; font-weight: bold;
+  border-radius: 5px; padding: 8px 20px; transition: .3s; border: 1px solid rgba(255,255,255,.2);
+}
+.cta-btn:hover { background-color: #a00000; transform: translateY(-2px); }
+.nav-social a { padding: 0 .45rem; font-size: 1.05rem; }
+.nav-social .fb { color: #fff; } .nav-social .x { color: #fff; } .nav-social .yt { color: #fff; } .nav-social a:hover { color: var(--court-gold-bright); }
+
+/* ---------- Hero and page banners ---------- */
+.hero-bg { background-size: cover; background-position: center; color: #fff; padding: 120px 0; }
+.court-title { font-size: 2.2rem; color: var(--court-gold-bright); font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
+@media (max-width: 768px) { .court-title { font-size: 1.6rem; } .hero-bg { padding: 80px 0; } }
+.page-hero { background-size: cover; background-position: center; color: #fff; padding: 80px 0; border-bottom: 5px solid var(--court-gold); }
+.page-hero h1 { font-weight: 700; }
+.page-hero .lead { opacity: .95; }
+.page-hero.compact { padding: 50px 0; }
+.breadcrumb-bar { background: #fff; border-bottom: 1px solid #eee; font-size: .9rem; }
+.breadcrumb-bar .breadcrumb { margin: 0; padding: 10px 0; }
+
+/* ---------- Section titles ---------- */
+.section-title {
+  border-left: 8px solid var(--court-red);
+  background-color: var(--court-green-2);
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 5px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+.section-heading-center { text-align: center; margin-bottom: 3rem; }
+.section-heading-center .kicker { color: #198754; font-weight: 700; text-transform: uppercase; font-size: .95rem; letter-spacing: .5px; }
+.section-heading-center .bar { width: 60px; height: 3px; background: var(--court-green); margin: 12px auto 0; }
+.title-underlined { border-bottom: 5px solid var(--court-red); width: fit-content; padding-bottom: 10px; color: var(--court-green); font-weight: bold; margin: 0 auto 1rem; }
+
+/* ---------- Cards ---------- */
+.card { border: 1px solid #eee; transition: all .4s ease; border-radius: 8px; background: #fff; }
+.card.hover-lift:hover, .card-lift:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(0,77,0,.2); border-color: var(--court-green-2); }
+.directorate-icon { color: var(--court-red); background-color: rgba(139,0,0,.1); width: 80px; height: 80px; line-height: 80px; border-radius: 50%; margin-bottom: 15px; text-align: center; }
+.btn-outline-primary { color: var(--court-green); border-color: var(--court-green); }
+.btn-outline-primary:hover { background-color: var(--court-green); color: #fff; border-color: var(--court-green); }
+.btn-court { background: var(--court-green); color: #fff; }
+.btn-court:hover { background: var(--court-gold); color: var(--court-green); }
+
+/* Notice ticker */
+.ticker-wrapper { background: #f3ebce; border-top: 2px solid #ffc107; border-bottom: 2px solid #ffc107; overflow: hidden; width: 100%; }
+.ticker-content { display: inline-block; white-space: nowrap; padding: 15px 0; padding-left: 100%; animation: ticker-scroll 35s linear infinite; }
+.ticker-content:hover { animation-play-state: paused; }
+.ticker-item { display: inline-block; margin-right: 80px; font-weight: 600; color: #856404; font-size: .95rem; }
+.ticker-item a { color: inherit; }
+@keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } }
+@media (prefers-reduced-motion: reduce) { .ticker-content { animation: none; padding-left: 1rem; white-space: normal; } }
+
+/* Chief Judge message */
+.cj-wrapper { background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,.05); }
+.cj-image { height: 100%; min-height: 450px; object-fit: cover; object-position: top; }
+.cj-quote { font-size: 1.1rem; border-left: 3px solid var(--court-gold); padding-left: 15px; }
+.text-justify { text-align: justify; }
+
+/* Profiles (judges) */
+.profile-card img { height: 300px; object-fit: cover; object-position: top; }
+.profile-card .designation { color: var(--court-red); font-size: .95rem; font-weight: bold; text-transform: uppercase; }
+.profile-header { background-size: cover; background-position: center; padding: 80px 0 120px; color: #fff; }
+.judge-portrait-container { margin-top: -100px; }
+.judge-portrait { width: 300px; max-width: 100%; height: 380px; object-fit: cover; object-position: top; border: 8px solid #fff; border-radius: 15px; box-shadow: 0 15px 35px rgba(0,0,0,.2); background: #eee; }
+.bio-section { background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,.05); margin-bottom: 30px; }
+.bio-title { color: var(--court-green); font-weight: 800; border-left: 5px solid var(--court-gold); padding-left: 15px; margin-bottom: 25px; text-transform: uppercase; font-size: 1.2rem; }
+.info-label { font-weight: bold; color: var(--court-green); display: block; margin-top: 15px; }
+.sidebar-card { background: #fff; border-radius: 15px; padding: 25px; border-top: 5px solid var(--court-gold); }
+.bg-soft { background-color: #f4f7f6; }
+.paged-grid [data-page-item][hidden] { display: none !important; }
+
+/* Honour roll */
+.honor-card { transition: all .3s ease; border-bottom: 4px solid transparent !important; background: #fff; }
+.honor-card:hover { transform: translateY(-10px); border-bottom: 4px solid var(--court-gold) !important; box-shadow: 0 10px 20px rgba(0,0,0,.1) !important; }
+.honor-img-wrapper { width: 160px; height: 200px; margin: 0 auto; overflow: hidden; border-radius: 8px; background: #f0f0f0; display: flex; align-items: center; justify-content: center; }
+.honor-img-wrapper img { width: 100%; height: 100%; object-fit: contain; object-position: top; filter: grayscale(100%); transition: filter .4s ease, transform .4s ease; }
+.honor-card:hover .honor-img-wrapper img { filter: grayscale(0%); transform: scale(1.08); }
+.text-gold-scc { color: var(--court-gold); font-weight: 700; font-size: .9rem; }
+.photo-placeholder { display: flex; align-items: center; justify-content: center; background: #eef1ee; color: #9aa79a; }
+.honour-large img, .honour-large .photo-placeholder { height: 300px; object-fit: cover; object-position: top; width: 100%; }
+
+/* Departments */
+.dept-hero { padding: 100px 0; }
+.dept-head-photo { width: 180px; height: 180px; object-fit: cover; }
+
+/* Gallery */
+.gallery-item { position: relative; cursor: pointer; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,.1); background: #e9ecef; display: block; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+.gallery-item:hover img { transform: scale(1.08); }
+.gallery-overlay { position: absolute; inset: 0; background: linear-gradient(transparent, rgba(0,77,0,.75)); opacity: 0; transition: opacity .3s ease; pointer-events: none; display: flex; align-items: flex-end; padding: 1rem; color: #fff; font-weight: bold; }
+.gallery-item:hover .gallery-overlay, .gallery-item:focus .gallery-overlay { opacity: 1; }
+.album-card .count { position: absolute; top: 10px; right: 10px; }
+.lightbox .modal-content { background: rgba(0,0,0,.92); border: 0; border-radius: 0; }
+.lightbox img { max-width: 92%; max-height: 78vh; border: 4px solid #fff; border-radius: 4px; }
+.lightbox .nav-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: var(--court-green-2); color: #fff; border: none; width: 52px; height: 52px; border-radius: 50%; font-size: 1.3rem; z-index: 1056; }
+.lightbox .prev-arrow { left: 20px; } .lightbox .next-arrow { right: 20px; }
+
+/* Documents */
+.doc-row { background: #fff; border-radius: 8px; margin-bottom: 10px; padding: 15px 20px; border-left: 5px solid var(--court-green); transition: .3s; display: flex; align-items: center; justify-content: space-between; gap: 1rem; box-shadow: 0 2px 5px rgba(0,0,0,.05); }
+.doc-row:hover { transform: translateX(5px); border-left-color: var(--court-gold); }
+.btn-download { background-color: var(--court-green); color: #fff; border-radius: 5px; font-size: .9rem; white-space: nowrap; }
+.btn-download:hover { background-color: var(--court-gold); color: var(--court-green); }
+.btn-download-alt { border: 1.5px solid var(--court-green); color: var(--court-green); transition: .3s; white-space: nowrap; }
+.btn-download-alt:hover { background: var(--court-green); color: #fff; }
+.filter-section { background: #fff; border-radius: 10px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,.05); margin-top: -60px; position: relative; }
+.table-court thead th { background-color: var(--court-green); color: var(--court-gold); border: 0; }
+.doc-tabs .nav-link { color: var(--court-green); font-weight: 600; }
+.doc-tabs .nav-link.active { color: var(--court-gold) !important; border-top: 3px solid var(--court-gold) !important; }
+
+/* Contact */
+.section-padding { padding: 80px 0; }
+.contact-card { background: #fff; padding: 35px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,.05); }
+.color-primary { color: var(--court-green); font-weight: bold; }
+.info-item { display: flex; gap: 15px; align-items: flex-start; }
+.info-item i { color: var(--court-green); font-size: 1.2rem; margin-top: 4px; width: 22px; text-align: center; }
+.social-links-contact a { display: inline-flex; width: 40px; height: 40px; border-radius: 50%; background: var(--court-green); color: #fff; align-items: center; justify-content: center; margin-right: 8px; text-decoration: none; }
+.social-links-contact a:hover { background: var(--court-gold); }
+.btn-submit { background: var(--court-green); color: #fff; border: 0; padding: 12px 30px; border-radius: 5px; font-weight: bold; }
+.btn-submit:hover { background: var(--court-gold); color: var(--court-green); }
+.map-container iframe { border-radius: 10px; width: 100%; height: 400px; border: 0; }
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+/* Footer */
+.main-footer { background-color: #1a1a1a; color: #fff; padding: 50px 0 0; margin-top: 0; }
+.main-footer h5 { color: var(--court-gold); }
+.footer-link { color: #ccc; text-decoration: none; transition: .3s; }
+.footer-link:hover { color: var(--court-gold); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,.1); background: rgba(0,0,0,.2); color: rgba(255,255,255,.7); font-size: .9rem; }
+.footer-bottom a { color: #28a745; }
+
+#btn-back-to-top { position: fixed; bottom: 30px; right: 30px; display: none; width: 45px; height: 45px; border-radius: 50%; background-color: var(--court-gold-bright); color: var(--court-green); border: none; z-index: 1000; transition: all .3s ease; }
+#btn-back-to-top:hover { background-color: var(--court-green); color: var(--court-gold-bright); }
+
+/* ---------- Styles used inside imported page content ---------- */
+.identity-card { border: none; border-top: 5px solid var(--court-gold); background: #fff; border-radius: 8px; transition: .3s; }
+.identity-card:hover { transform: translateY(-10px); }
+.jurisdiction-box { border-left: 4px solid var(--court-green); background: #fff; padding: 25px; height: 100%; box-shadow: 2px 2px 10px rgba(0,0,0,.03); }
+.sub-nav { background: #fff; border-bottom: 2px solid var(--court-gold); position: sticky; top: 72px; z-index: 100; }
+.sub-nav .nav-link { color: var(--court-green); font-weight: 600; padding: 15px 20px; }
+.sub-nav .nav-link:hover { color: var(--court-gold); }
+.step-number { width: 50px; height: 50px; background: var(--court-gold); color: var(--court-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; margin: 0 auto 15px; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(0,0,0,.1); }
+.quiz-card { background: #fff; border-radius: 15px; border: 1px solid #dee2e6; }
+.table-scc thead th, .table-scc thead td { background-color: var(--court-green); color: #fff; }
+.feature-icon { width: 60px; height: 60px; background: rgba(212,175,55,.1); color: var(--court-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 15px; }
+.progress-bar { background-color: var(--court-gold); }
+.rich-content img { max-width: 100%; height: auto; }
+.rich-content .reveal { opacity: 1; transform: none; }
+.reveal { opacity: 1; }
+.animate-pulse { animation: pulse-animation 2s infinite; }
+@keyframes pulse-animation { 0% { transform: scale(.95); } 70% { transform: scale(1); } 100% { transform: scale(.95); } }
+
+@media print {
+  .navbar, .main-footer, #btn-back-to-top, .ticker-wrapper { display: none !important; }
+  body { padding-top: 0; }
+}
