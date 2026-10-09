@@ -166,7 +166,9 @@ function display(f, v, ctx = {}) {
     case 'toggle': return v ? 'Yes' : 'No';
     case 'image': return html`<img src="${img(v, 900)}" class="img-fluid rounded shadow-sm" alt="${f.label}">`;
     case 'images': return html`<div class="row g-2">${asArray(v).map((p) => html`<div class="col-6 col-md-4"><img src="${img(p.url, 600, 400, 'fill')}" class="img-fluid rounded" alt="${p.caption || ''}"></div>`)}</div>`;
-    case 'file': return html`<a class="btn btn-download-alt btn-sm" href="${safeUrl(v)}" target="_blank" rel="noopener"><i class="fas fa-file-download me-1"></i>Download ${fileLabel(v)}</a>`;
+    case 'file':
+      if (ctx.entryId && ctx.docButtons) return ctx.docButtons({ _id: ctx.entryId }, f.key, v, 'btn-sm');
+      return html`<a class="btn btn-download-alt btn-sm" href="${safeUrl(v)}" target="_blank" rel="noopener"><i class="fas fa-file-download me-1"></i>Download ${fileLabel(v)}</a>`;
     case 'list': return html`<ul class="mb-0">${asArray(v).map((x) => html`<li>${x}</li>`)}</ul>`;
     case 'cards': return html`<div class="row g-3">${asArray(v).map((c) => html`<div class="col-md-4"><div class="p-3 bg-light rounded h-100">${c.icon ? html`<i class="${c.icon} text-success me-2"></i>` : ''}<strong>${c.title}</strong><div class="small text-muted mt-1">${c.text}</div></div></div>`)}</div>`;
     case 'links': return html`${asArray(v).map((l) => html`<a class="btn btn-outline-success btn-sm me-2 mb-2" href="${safeUrl(l.url)}">${l.icon ? html`<i class="${l.icon} me-1"></i>` : ''}${l.label}</a>`)}`;

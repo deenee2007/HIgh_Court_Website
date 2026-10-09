@@ -7,7 +7,37 @@ const V = require('../views/site');
 const { parseBody } = require('../http');
 const { rateLimit, safeEqual } = require('../security');
 const { loadSession, canEdit } = require('../auth');
-const { asArray } = require('../fields');
+const { asArray, slugify } = require('../fields');
+const fs = require('fs');
+const path = require('path');
+const { Readable } = require('stream');
+
+const DOC_TYPES = { pdf: 'application/pdf', doc: 'application/msword', docx: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', xls: 'application/vnd.ms-excel', xlsx: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', ppt: 'application/vnd.ms-powerpoint', pptx: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp', gif: 'image/gif' };
+
+// Finds the document stored in a file field of an item, if the visitor may see it
+async function findDocument(req, id, field) {
+  const entry = await C.getEntryById(id);
+  if (!entry) return null;
+  const section = await C.getSection(entry.section);
+  if (!section) return null;
+  const f = section.fields.find((x) => x.key === field && x.type === 'file');
+  const url = entry.data && entry.data[field];
+  if (!f || !url || typeof url !== 'string') return null;
+  if (entry.status !== 'published') {
+    const user = await loadSession(req);
+    if (!user || !canEdit(user, section.slug)) return null;
+  }
+  return { entry, section, field, url };
+}
+
+function isAllowedRemote(url) {
+  try {
+    const u = new URL(url);
+    if (u.protocol !== 'https:' || u.hostname !== 'res.cloudinary.com') return false;
+    if (config.cloudinary && !u.pathname.startsWith('/' + config.cloudinary.cloudName + '/')) return false;
+    return true;
+  } catch { return false; }
+}
 
 const VERSION = require('../../package.json').version + '.' + Date.now().toString(36);
 const LEGACY = { '/index.html': '/', '/gallery.html': '/gallery', '/judgments.html': '/judgments', '/cause_list.html': '/cause-lists', '/rules.html': '/rules', '/small_claims.html': '/small-claims', '/e-filing.html': '/e-filing', '/about.html': '/about' };
@@ -124,6 +154,79 @@ function register(app) {
     const esc = (u) => u.replace(/&/g, '&amp;').replace(/</g, '&lt;');
     res.setHeader('Content-Type', 'application/xml; charset=utf-8');
     res.end(`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${[...new Set(urls)].map((u) => `<url><loc>${esc(base + u)}</loc></url>`).join('\n')}\n</urlset>`);
+  });
+
+  // The document itself, sent so browsers can display it (or save it with ?download=1)
+  app.get('/doc/:id/:field', async (req, res) => {
+    const doc = await findDocument(req, req.params.id, req.params.field);
+    if (!doc) return sendError(req, res, 404, 'This document is not available.');
+    const ext = (path.extname(decodeURIComponent(doc.url.split('?')[0])).slice(1) || 'pdf').toLowerCase();
+    const type = DOC_TYPES[ext] || 'application/octet-stream';
+    const name = `${slugify(doc.entry.title, 90) || 'document'}.${ext}`;
+    const disposition = req.query.download ? 'attachment' : 'inline';
+    res.setHeader('Content-Type', type);
+    res.setHeader('Content-Disposition', `${disposition}; filename="${name}"`);
+    res.setHeader('X-Content-Type-Options', 'nosniff');
+    res.removeHeader('Content-Security-Policy'); // let the browser's own PDF reader work when the file is opened directly
+    res.setHeader('Cache-Control', doc.entry.status === 'published' ? 'public, max-age=3600' : 'no-store');
+    res.setHeader('Accept-Ranges', 'bytes');
+
+    if (doc.url.startsWith('/')) {
+      // a file kept with the website (for example the original PDFs in /assets)
+      const root = path.resolve(config.publicDir);
+      let rel;
+      try { rel = decodeURIComponent(doc.url.split('?')[0]); } catch { return sendError(req, res, 404); }
+      const file = path.resolve(root, '.' + rel);
+      if (!file.startsWith(root + path.sep) || !fs.existsSync(file)) return sendError(req, res, 404, 'This document is not available.');
+      const size = fs.statSync(file).size;
+      const m = /^bytes=(\d*)-(\d*)$/.exec(req.headers.range || '');
+      if (m && (m[1] || m[2])) {
+        let start = m[1] ? parseInt(m[1], 10) : size - parseInt(m[2], 10);
+        let end = m[1] && m[2] ? parseInt(m[2], 10) : size - 1;
+        if (start < 0) start = 0;
+        if (start >= size || end < start) { res.statusCode = 416; res.setHeader('Content-Range', `bytes */${size}`); return res.end(); }
+        end = Math.min(end, size - 1);
+        res.statusCode = 206;
+        res.setHeader('Content-Range', `bytes ${start}-${end}/${size}`);
+        res.setHeader('Content-Length', end - start + 1);
+        fs.createReadStream(file, { start, end }).pipe(res);
+        return 'done';
+      }
+      res.setHeader('Content-Length', size);
+      if (req.method === 'HEAD') return res.end();
+      fs.createReadStream(file).pipe(res);
+      return 'done';
+    }
+
+    if (!isAllowedRemote(doc.url)) return sendError(req, res, 404, 'This document is not available.');
+    const headers = {};
+    if (req.headers.range) headers.Range = String(req.headers.range).slice(0, 100);
+    let upstream;
+    try {
+      upstream = await fetch(doc.url, { headers, redirect: 'follow', signal: AbortSignal.timeout(60000) });
+    } catch (err) {
+      console.error('Document fetch failed', doc.url, err.message);
+      return sendError(req, res, 502, 'The document could not be loaded just now. Please try again in a moment.');
+    }
+    if (!upstream.ok && upstream.status !== 206) {
+      console.error('Document storage answered', upstream.status, doc.url, upstream.headers.get('x-cld-error') || '');
+      return sendError(req, res, 502, 'The document could not be loaded just now. Please try again in a moment.');
+    }
+    res.statusCode = upstream.status === 206 ? 206 : 200;
+    for (const h of ['content-length', 'content-range']) { const v = upstream.headers.get(h); if (v) res.setHeader(h, v); }
+    if (req.method === 'HEAD' || !upstream.body) return res.end();
+    Readable.fromWeb(upstream.body).on('error', () => res.destroy()).pipe(res);
+    return 'done';
+  });
+
+  // A page of the website that shows the document
+  app.get('/view/:id/:field', async (req, res) => {
+    const doc = await findDocument(req, req.params.id, req.params.field);
+    if (!doc) return sendError(req, res, 404, 'This document is not available.');
+    const ctx = await baseCtx(req);
+    const backUrl = doc.section.detail && doc.field !== 'file' ? C.entryUrl(doc.section, doc.entry) : `/${doc.section.slug}#${doc.entry.slug}`;
+    if (doc.entry.status !== 'published') res.setHeader('Cache-Control', 'no-store');
+    res.html(V.documentViewer(ctx, { ...doc, backUrl }));
   });
 
   app.post('/contact', async (req, res) => {

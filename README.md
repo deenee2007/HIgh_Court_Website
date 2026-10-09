@@ -32,7 +32,9 @@ You need three accounts: GitHub (already set up), MongoDB Atlas and Cloudinary (
 
 On the Cloudinary dashboard, copy the **API Environment variable** (it starts with `cloudinary://`). This is your `CLOUDINARY_URL`. Photos and documents are stored in a folder called `gombe-high-court`, separate from your other app.
 
-Cloudinary blocks delivery of PDF files on new accounts by default. Documents are uploaded as "raw" files, which are not affected, but if a PDF link ever shows an error, enable **Allow delivery of PDF and ZIP files** under Settings, Security.
+Cloudinary blocks delivery of PDF and ZIP files on new accounts by default. Turn on **Allow delivery of PDF and ZIP files** under Settings, Security, otherwise documents will not open.
+
+Documents are shown inside the website by a built in viewer (public/vendor/pdfjs, Mozilla PDF.js, Apache 2.0 licence), and the site sends them to visitors itself, so links always open the court's own pages rather than Cloudinary addresses.
 
 ### 3. GitHub
 

@@ -16,7 +16,7 @@ async function main() {
 
   const app = new App();
   app.use(async (req, res) => securityHeaders(req, res));
-  app.static(['/css/', '/js/', '/assets/', '/uploads/', '/fonts/'], config.publicDir);
+  app.static(['/css/', '/js/', '/assets/', '/uploads/', '/fonts/', '/vendor/'], config.publicDir);
   app.use(async (req, res) => { if (await publicRoutes.legacyRedirect(req, res)) return; });
   adminRoutes.register(app);
   publicRoutes.register(app);

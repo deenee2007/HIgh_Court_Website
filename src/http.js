@@ -5,6 +5,7 @@
 const fs = require('fs');
 const path = require('path');
 const { Readable } = require('stream');
+const zlib = require('zlib');
 const config = require('./config');
 
 class HttpError extends Error {
@@ -107,7 +108,7 @@ function cookieString(name, value, opts = {}) {
 
 // ---------- static files ----------
 const MIME = {
-  '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
+  '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.mjs': 'text/javascript; charset=utf-8',
   '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.gif': 'image/gif',
   '.webp': 'image/webp', '.svg': 'image/svg+xml', '.ico': 'image/x-icon', '.pdf': 'application/pdf',
   '.woff': 'font/woff', '.woff2': 'font/woff2', '.txt': 'text/plain; charset=utf-8', '.xml': 'application/xml',
@@ -115,6 +116,17 @@ const MIME = {
   '.xls': 'application/vnd.ms-excel', '.xlsx': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
   '.ppt': 'application/vnd.ms-powerpoint', '.pptx': 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
 };
+
+// Scripts and styles are compressed once and kept in memory (much faster on mobile data)
+const COMPRESSIBLE = new Set(['.css', '.js', '.mjs', '.svg', '.json', '.txt', '.xml']);
+const gzCache = new Map();
+function gzipped(file, etag) {
+  const hit = gzCache.get(file);
+  if (hit && hit.etag === etag) return hit.buf;
+  const buf = zlib.gzipSync(fs.readFileSync(file), { level: 9 });
+  gzCache.set(file, { etag, buf });
+  return buf;
+}
 
 function serveStatic(prefixes, dir) {
   const root = path.resolve(dir);
@@ -132,9 +144,19 @@ function serveStatic(prefixes, dir) {
     const ext = path.extname(file).toLowerCase();
     res.setHeader('Content-Type', MIME[ext] || 'application/octet-stream');
     res.setHeader('ETag', etag);
-    res.setHeader('Cache-Control', req.path.startsWith('/uploads/') || req.path.startsWith('/assets/') || req.path.startsWith('/fonts/') ? 'public, max-age=604800' : 'public, max-age=3600');
+    res.setHeader('Cache-Control', /^\/(uploads|assets|fonts|vendor)\//.test(req.path) ? 'public, max-age=604800' : 'public, max-age=3600');
     if (ext === '.svg') res.setHeader('Content-Security-Policy', "script-src 'none'");
     if (req.headers['if-none-match'] === etag) { res.statusCode = 304; res.end(); return true; }
+    if (COMPRESSIBLE.has(ext) && st.size > 1024) {
+      res.setHeader('Vary', 'Accept-Encoding');
+      if (/\bgzip\b/.test(req.headers['accept-encoding'] || '')) {
+        const buf = gzipped(file, etag);
+        res.setHeader('Content-Encoding', 'gzip');
+        res.setHeader('Content-Length', buf.length);
+        res.end(req.method === 'HEAD' ? undefined : buf);
+        return true;
+      }
+    }
     res.setHeader('Content-Length', st.size);
     if (req.method === 'HEAD') { res.end(); return true; }
     fs.createReadStream(file).pipe(res);

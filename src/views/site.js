@@ -275,6 +275,17 @@ function noticeList(items) {
   </div>`)}</div>`;
 }
 
+// View (inside the website) and Download buttons for a document
+function docButtons(entry, field, url, size = '', withView = true) {
+  if (!url) return '';
+  const isPdf = withView && fileLabel(url) === 'PDF';
+  const base = `/doc/${encodeURIComponent(entry._id)}/${encodeURIComponent(field)}`;
+  return html`<span class="doc-actions d-inline-flex gap-2 flex-wrap justify-content-end">
+    ${isPdf ? html`<a href="/view/${encodeURIComponent(entry._id)}/${encodeURIComponent(field)}" class="btn btn-download ${size} px-3"><i class="far fa-eye me-2" aria-hidden="true"></i>View</a>` : ''}
+    <a href="${base}?download=1" class="btn btn-download-alt ${size} px-3" download><i class="fas fa-download me-2" aria-hidden="true"></i>Download${fileLabel(url) === 'PDF' ? '' : ` ${fileLabel(url)}`}</a>
+  </span>`;
+}
+
 function docRows(section, items) {
   const listFields = section.fields.filter((f) => f.showInList && f.type !== 'file');
   return items.map((e) => {
@@ -282,7 +293,7 @@ function docRows(section, items) {
     const meta = [e.data.note, ...listFields.map((f) => (isEmpty(e.data[f.key]) ? '' : f.type === 'date' ? `${f.label}: ${formatDate(e.data[f.key], 'short')}` : String(e.data[f.key])))].filter(Boolean);
     return html`<div class="doc-row" id="${e.slug}">
       <div><h3 class="h6 mb-0 fw-bold">${e.title}</h3>${meta.length ? html`<small class="text-muted">${meta.join(' | ')}</small>` : ''}</div>
-      ${file ? html`<a href="${safeUrl(file)}" class="btn btn-download px-3" target="_blank" rel="noopener"><i class="fas fa-file-${fileLabel(file) === 'PDF' ? 'pdf' : 'download'} me-2"></i>Download</a>` : html`<span class="badge bg-light text-muted border">Not yet available</span>`}
+      ${file ? docButtons(e, 'file', file) : html`<span class="badge bg-light text-muted border">Not yet available</span>`}
     </div>`;
   });
 }
@@ -296,7 +307,7 @@ function docTable(section, items) {
       return html`<tr id="${e.slug}">
         <td><span class="fw-bold" style="color:var(--court-green)">${e.title}</span>${isNew ? html` <span class="badge bg-success animate-pulse ms-1">NEW</span>` : ''}</td>
         ${cols.map((c) => html`<td>${c.type === 'date' ? formatDate(e.data[c.key], 'short') : c.type === 'select' ? html`<span class="badge rounded-pill ${/criminal/i.test(e.data[c.key]) ? 'bg-danger-subtle text-danger' : 'bg-primary-subtle text-primary'}">${e.data[c.key]}</span>` : e.data[c.key]}</td>`)}
-        <td class="text-end">${e.data.file ? html`<a class="btn btn-sm btn-download-alt" href="${safeUrl(e.data.file)}" target="_blank" rel="noopener"><i class="fas fa-file-pdf me-1"></i>${fileLabel(e.data.file)}</a>` : html`<span class="text-muted small">Not available</span>`}</td>
+        <td class="text-end">${e.data.file ? docButtons(e, 'file', e.data.file, 'btn-sm') : html`<span class="text-muted small">Not available</span>`}</td>
       </tr>`;
     })}</tbody></table></div>`;
 }
@@ -549,8 +560,8 @@ function extraFields(section, entry, ctx) {
   if (!rows.length) return '';
   const short = rows.filter((f) => !['richtext', 'textarea', 'images', 'cards', 'list', 'image'].includes(f.type));
   const long = rows.filter((f) => !short.includes(f));
-  return html`${short.length ? html`<dl class="row mb-4">${short.map((f) => html`<dt class="col-sm-4">${f.label}</dt><dd class="col-sm-8">${display(f, entry.data[f.key], ctx)}</dd>`)}</dl>` : ''}
-    ${long.map((f) => html`<div class="mb-4"><h3 class="h5 fw-bold" style="color:var(--court-green)">${f.label}</h3><div class="rich-content">${display(f, entry.data[f.key], ctx)}</div></div>`)}`;
+  return html`${short.length ? html`<dl class="row mb-4">${short.map((f) => html`<dt class="col-sm-4">${f.label}</dt><dd class="col-sm-8">${display(f, entry.data[f.key], { ...ctx, entryId: entry._id, docButtons })}</dd>`)}</dl>` : ''}
+    ${long.map((f) => html`<div class="mb-4"><h3 class="h5 fw-bold" style="color:var(--court-green)">${f.label}</h3><div class="rich-content">${display(f, entry.data[f.key], { ...ctx, entryId: entry._id, docButtons })}</div></div>`)}`;
 }
 
 function relatedBlocks(ctx) {
@@ -578,7 +589,7 @@ function profileDetail(ctx, section, e) {
           ${photo(d.photo, 'judge-portrait mb-4', e.title, 600, 760, 'fill')}
           ${info.length || (ctx.parents || []).length ? html`<div class="sidebar-card shadow-sm mb-4">
             <h2 class="h5 fw-bold mb-3"><i class="fas fa-briefcase me-2 text-success"></i>Quick Information</h2>
-            ${info.map((f) => html`<span class="info-label">${f.label}</span><p>${display(f, d[f.key], ctx)}</p>`)}${parentLink(ctx)}
+            ${info.map((f) => html`<span class="info-label">${f.label}</span><p>${display(f, d[f.key], { ...ctx, entryId: e._id, docButtons })}</p>`)}${parentLink(ctx)}
           </div>` : ''}
           <a href="/${section.slug}" class="btn btn-outline-success mb-4"><i class="fas fa-arrow-left me-1"></i> Back to ${section.name}</a>
         </div>
@@ -588,7 +599,7 @@ function profileDetail(ctx, section, e) {
             ${asArray(d.education).map((x) => html`<li class="list-group-item bg-transparent border-0 ps-0"><i class="${x.icon || 'fas fa-graduation-cap'} me-3 text-success"></i>${x.title ? html`<strong>${x.title}:</strong> ` : ''}${x.text}</li>`)}</ul></div>` : ''}
           ${asArray(d.career).length ? html`<div class="bio-section shadow-sm"><h2 class="bio-title">Career Milestones</h2><div class="ms-3 mt-3">
             ${asArray(d.career).map((x, i) => html`<div class="mb-4 border-start ${i ? 'border-secondary' : 'border-success'} border-3 ps-3"><h3 class="h6 fw-bold">${x.title}</h3><p class="small text-muted mb-0">${x.text}</p></div>`)}</div></div>` : ''}
-          ${longExtra.map((f) => html`<div class="bio-section shadow-sm"><h2 class="bio-title">${f.label}</h2><div class="rich-content">${display(f, d[f.key], ctx)}</div></div>`)}
+          ${longExtra.map((f) => html`<div class="bio-section shadow-sm"><h2 class="bio-title">${f.label}</h2><div class="rich-content">${display(f, d[f.key], { ...ctx, entryId: e._id, docButtons })}</div></div>`)}
           ${d.more ? html`<div class="bio-section shadow-sm rich-content">${raw(d.more)}</div>` : ''}
         </div>
       </div></div></div>${relatedBlocks(ctx)}`;
@@ -637,7 +648,7 @@ function articleDetail(ctx, section, e) {
       ${d.image ? html`<img src="${img(d.image, 1400)}" class="img-fluid rounded shadow-sm mb-4 w-100" alt="">` : ''}
       ${d.summary ? html`<p class="lead">${d.summary}</p>` : ''}
       <div class="rich-content fs-5">${raw(d.body || '')}</div>
-      ${d.attachment ? html`<p class="mt-4"><a class="btn btn-download" href="${safeUrl(d.attachment)}" target="_blank" rel="noopener"><i class="fas fa-file-download me-2"></i>Download attachment (${fileLabel(d.attachment)})</a></p>` : ''}
+      ${d.attachment ? html`<div class="mt-4 p-3 bg-light rounded d-flex flex-wrap align-items-center gap-3"><span class="fw-semibold"><i class="fas fa-paperclip me-2 text-muted" aria-hidden="true"></i>Attachment</span>${docButtons(e, 'attachment', d.attachment)}</div>` : ''}
       ${extraFields(section, e, ctx)}${parentLink(ctx)}
       <a href="/${section.slug}" class="btn btn-outline-success mt-4"><i class="fas fa-arrow-left me-1"></i> Back to ${section.name}</a>
     </article>${relatedBlocks(ctx)}`;
@@ -703,6 +714,36 @@ function entryPage(ctx, section, e) {
   return layout(ctx, { title: e.title, description: desc, body, image });
 }
 
+// Document viewer: shows a PDF inside the website
+function documentViewer(ctx, { section, entry, field, url, backUrl }) {
+  const isPdf = fileLabel(url) === 'PDF';
+  const src = `/doc/${encodeURIComponent(entry._id)}/${encodeURIComponent(field)}`;
+  const body = html`<header class="page-hero compact text-center" style="${bg(section.banner || ctx.settings.pageBanner, 0.88)}">
+      <div class="container"><p class="text-uppercase small fw-bold mb-2" style="letter-spacing:1px;color:var(--court-gold-bright)">${section.name}</p><h1 class="h2 fw-bold mb-0">${entry.title}</h1></div>
+    </header>
+    ${crumbs([{ label: 'Home', url: '/' }, { label: section.name, url: '/' + section.slug }, { label: entry.title }])}
+    <div class="bg-soft py-4"><div class="container">
+      <div class="viewer-toolbar d-flex flex-wrap align-items-center gap-2 mb-3">
+        <a href="${backUrl}" class="btn btn-outline-success btn-sm"><i class="fas fa-arrow-left me-1" aria-hidden="true"></i>Back</a>
+        ${isPdf ? html`<div class="d-flex align-items-center gap-1 ms-md-3" data-pdf-controls hidden>
+          <button type="button" class="btn btn-light btn-sm border" data-pdf="prev" aria-label="Previous page"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+          <span class="small px-2" data-pdf="pages" aria-live="polite"></span>
+          <button type="button" class="btn btn-light btn-sm border" data-pdf="next" aria-label="Next page"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+          <button type="button" class="btn btn-light btn-sm border ms-2" data-pdf="zoomout" aria-label="Zoom out"><i class="fas fa-magnifying-glass-minus" aria-hidden="true"></i></button>
+          <button type="button" class="btn btn-light btn-sm border" data-pdf="zoomin" aria-label="Zoom in"><i class="fas fa-magnifying-glass-plus" aria-hidden="true"></i></button>
+        </div>` : ''}
+        <span class="ms-auto">${docButtons(entry, field, url, 'btn-sm', false)}</span>
+      </div>
+      ${isPdf ? html`<div class="pdf-viewer" data-pdf-src="${src}" tabindex="0" aria-label="Document: ${entry.title}">
+          <div class="pdf-status text-center text-muted py-5" data-pdf="status"><div class="spinner-border text-success mb-3" role="status"></div><div>Opening the document...</div></div>
+        </div>
+        <noscript><p class="text-center py-4"><a href="${src}">Open the document</a></p></noscript>`
+        : html`<div class="text-center py-5 bg-white rounded shadow-sm"><i class="far fa-file-lines fa-3x text-muted mb-3" aria-hidden="true"></i><p class="lead">This document cannot be shown on the page. Please download it to read it.</p></div>`}
+    </div></div>
+    ${isPdf ? html`<script type="module" src="/js/pdfview.js?v=${ctx.version}"></script>` : ''}`;
+  return layout(ctx, { title: entry.title, description: `${section.name}: ${entry.title}`, body });
+}
+
 function errorPage(ctx, status, message) {
   const body = html`${pageHero(status === 404 ? 'Page not found' : 'Something went wrong', '', ctx.settings.pageBanner, { compact: true })}
     <div class="container py-5 text-center"><p class="lead">${message || (status === 404 ? 'The page you are looking for may have been moved or no longer exists.' : 'Please try again in a moment.')}</p>
@@ -710,4 +751,4 @@ function errorPage(ctx, status, message) {
   return layout(ctx, { title: status === 404 ? 'Page not found' : 'Error', body });
 }
 
-module.exports = { layout, homePage, sectionPage, entryPage, errorPage, esc };
+module.exports = { layout, homePage, sectionPage, entryPage, errorPage, documentViewer, esc };
