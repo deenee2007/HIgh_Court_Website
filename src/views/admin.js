@@ -84,11 +84,11 @@ function pageHead(title, actions = '', sub = '') {
 // ---------- login and setup ----------
 function authPage(ctx, { title, body }) {
   return html`<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
-    <title>${title}</title><link href="${BS_CSS}" rel="stylesheet" crossorigin="anonymous"><link href="/css/admin.css?v=${ctx.version}" rel="stylesheet"></head>
-    <body class="login-body"><div class="login-card card shadow-sm"><div class="card-body p-4 p-md-5">
+    <title>${title}</title><link href="${BS_CSS}" rel="stylesheet" crossorigin="anonymous"><link href="${FA_CSS}" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer"><link href="/css/admin.css?v=${ctx.version}" rel="stylesheet"></head>
+    <body class="login-body" data-csrf="${ctx.csrf || ''}"><div class="login-card card shadow-sm"><div class="card-body p-4 p-md-5">
       <div class="text-center mb-4"><img src="${img(ctx.settings.logo, 160)}" width="72" height="72" class="rounded-circle mb-3" alt=""><h1 class="h4">${title}</h1><div class="text-muted small">${ctx.settings.siteName}</div></div>
       ${ctx.error ? html`<div class="alert alert-danger small">${ctx.error}</div>` : ''}${ctx.notice ? html`<div class="alert alert-success small">${ctx.notice}</div>` : ''}
-      ${body}</div></div></body></html>`;
+      ${body}</div></div><script src="/js/admin.js?v=${ctx.version}"></script></body></html>`;
 }
 
 function loginPage(ctx) {
@@ -97,6 +97,19 @@ function loginPage(ctx) {
     <div class="mb-3"><label class="form-label" for="email">Email</label><input class="form-control" id="email" name="email" type="email" autocomplete="username" required autofocus value="${ctx.email || ''}"></div>
     <div class="mb-4"><label class="form-label" for="password">Password</label><input class="form-control" id="password" name="password" type="password" autocomplete="current-password" required></div>
     <button class="btn btn-success w-100">Sign in</button></form>` });
+}
+
+function changePasswordPage(ctx) {
+  const u = ctx.user;
+  return authPage(ctx, { title: 'Choose your password', body: html`<p class="small text-muted">Welcome, ${u.name}. You signed in with a temporary password given by an administrator. Choose your own password to continue. Nobody else will know it.</p>
+    <form method="post" action="/admin/change-password">
+      ${csrfField(ctx)}
+      <input type="email" name="email" value="${u.email}" autocomplete="username" hidden>
+      <div class="mb-3"><label class="form-label" for="password">New password</label><input class="form-control" id="password" name="password" type="password" autocomplete="new-password" required minlength="10" autofocus><div class="form-text">At least 10 characters, with letters and numbers.</div></div>
+      <div class="mb-4"><label class="form-label" for="password2">Repeat new password</label><input class="form-control" id="password2" name="password2" type="password" autocomplete="new-password" required></div>
+      <button class="btn btn-success w-100">Save and continue</button>
+    </form>
+    <form method="post" action="/admin/logout" class="text-center mt-3">${csrfField(ctx)}<button class="btn btn-link btn-sm text-muted">Sign out</button></form>` });
 }
 
 function setupPage(ctx) {
@@ -417,7 +430,7 @@ function userList(ctx, users) {
   return shell(ctx, { title: 'Users', active: 'users', body: html`
     ${pageHead('Users', html`<a href="/admin/users/new" class="btn btn-success"><i class="fas fa-user-plus me-1"></i>New user</a>`)}
     <div class="card"><div class="table-responsive"><table class="table align-middle mb-0"><thead class="table-light"><tr><th>Name</th><th>Email</th><th>Role</th><th>Last sign in</th><th></th></tr></thead>
-      <tbody>${users.map((u) => html`<tr${u.active ? '' : raw(' class="text-muted"')}><td class="fw-semibold">${u.name}${u.active ? '' : ' (disabled)'}</td><td>${u.email}</td>
+      <tbody>${users.map((u) => html`<tr${u.active ? '' : raw(' class="text-muted"')}><td class="fw-semibold">${u.name}${u.active ? '' : ' (disabled)'}${u.mustChangePassword ? (u.tempExpires && new Date(u.tempExpires) < new Date() ? html` <span class="badge text-bg-danger">Temporary password expired</span>` : html` <span class="badge text-bg-warning">Awaiting first sign in</span>`) : ''}</td><td>${u.email}</td>
         <td>${u.role === 'superadmin' ? html`<span class="badge text-bg-dark">Super admin</span>` : html`<span class="badge text-bg-light border">Staff</span>`}</td>
         <td class="small">${dt(u.lastLoginAt) || 'Never'}</td><td class="text-end"><a href="/admin/users/${u._id}" class="btn btn-sm btn-outline-success">Edit</a></td></tr>`)}</tbody></table></div></div>` });
 }
@@ -435,7 +448,14 @@ function userForm(ctx, u, sections, opts = {}) {
         <div class="card mb-4"><div class="card-header bg-white fw-bold">Account</div><div class="card-body row g-3">
           <div class="col-md-6"><label class="form-label" for="name">Full name</label><input class="form-control" id="name" name="name" value="${u.name || ''}" required></div>
           <div class="col-md-6"><label class="form-label" for="email">Email (used to sign in)</label><input class="form-control" id="email" type="email" name="email" value="${u.email || ''}" required></div>
-          <div class="col-md-6"><label class="form-label" for="password">${isNew ? 'Temporary password' : 'Set a new password'}</label><input class="form-control" id="password" type="password" name="password" autocomplete="new-password"${isNew ? raw(' required') : ''} minlength="10"><div class="form-text">${isNew ? 'Share it privately. They should change it under My account.' : 'Leave empty to keep the current password.'}</div></div>
+          <div class="col-md-6"><label class="form-label" for="password">${isNew ? 'Temporary password' : String(u._id) === String(me._id) ? 'New password' : 'Reset password (temporary)'}</label>
+            <input class="form-control" id="password" type="password" name="password" autocomplete="new-password"${isNew ? raw(' required') : ''} minlength="10">
+            ${String(u._id) !== String(me._id) ? html`<button type="button" class="btn btn-sm btn-outline-success mt-2" data-generate-password="#password"><i class="fas fa-wand-magic-sparkles me-1"></i>Generate a strong password</button>` : ''}
+            <div class="form-text">${isNew
+              ? 'Give it to the person privately. It works for 72 hours, and they must choose their own password when they first sign in.'
+              : String(u._id) === String(me._id) ? 'Leave empty to keep your current password.'
+              : 'Leave empty to keep the current password. To reset it, enter or generate a temporary one: they will have to choose their own at their next sign in.'}</div></div>
+          ${!isNew && u.mustChangePassword ? html`<div class="col-12"><div class="alert alert-${u.tempExpires && new Date(u.tempExpires) < new Date() ? 'danger' : 'warning'} py-2 small mb-0">${u.tempExpires && new Date(u.tempExpires) < new Date() ? 'The temporary password has expired without being used. Issue a new one above.' : `Waiting for this person to sign in and choose their own password. The temporary password expires ${dt(u.tempExpires)}.`}</div></div>` : ''}
           <div class="col-md-6"><label class="form-label" for="role">Role</label><select class="form-select" id="role" name="role" data-role-select${isSuper(me) ? '' : raw(' disabled')}>
             <option value="staff"${sel('staff', u.role)}>Staff (permissions chosen below)</option><option value="superadmin"${sel('superadmin', u.role)}>Super admin (full control)</option></select></div>
           <div class="col-12"><div class="form-check form-switch"><input type="hidden" name="active" value="0"><input class="form-check-input" type="checkbox" id="active" name="active" value="1"${chk(u.active !== false)}><label class="form-check-label" for="active">Account is active (can sign in)</label></div></div>
@@ -517,6 +537,6 @@ function notAllowed(ctx) {
 }
 
 module.exports = {
-  shell, loginPage, setupPage, dashboard, entryList, entryForm, historyPage, sectionList, sectionForm, fieldRow, menuPage, homeEditor, blockForm,
+  shell, loginPage, setupPage, changePasswordPage, dashboard, entryList, entryForm, historyPage, sectionList, sectionForm, fieldRow, menuPage, homeEditor, blockForm,
   settingsPage, SETTINGS_FIELDS, userList, userForm, accountPage, messagesPage, activityPage, backupPage, notAllowed,
 };

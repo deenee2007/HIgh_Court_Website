@@ -12,6 +12,7 @@ The public site keeps the original design. Everything on it (judges, directorate
   * on the home page, as a block you can move up or down;
   * inside the pages of another section, for example listing registries on the page of the directorate they belong to.
 * **Manage the menu and home page**: reorder, hide, rename and add blocks or links.
+* **Reset forgotten passwords**: an administrator opens the user, clicks **Generate a strong password**, saves, and gives the temporary password to the person privately.
 * **Manage users**: the super admin creates accounts and decides, section by section, who can edit drafts and who can publish. Staff without publishing rights can still edit published pages; their changes wait for approval and the live page stays unchanged until approved.
 * **History**: every save keeps a copy, and earlier versions can be restored.
 * **Messages** sent through the contact form, an **activity log** of all changes, and a **backup** download.
@@ -102,6 +103,7 @@ Without `MONGODB_URI` the site uses a temporary in memory database, which is use
 ## Security measures
 
 * Passwords are hashed with scrypt; accounts lock for 15 minutes after 5 wrong passwords, and sign in attempts are rate limited.
+* Passwords given by an administrator (for new accounts and resets) are temporary: they expire after 72 hours, and the owner must choose their own password at first sign in before they can do anything else. The Users page shows who has not done so yet.
 * Sessions expire after 8 hours, or 1 hour without activity. Changing a password signs out other devices.
 * Every form in the dashboard is protected against cross site request forgery.
 * Text from the editor is cleaned before it is saved, so scripts cannot be planted on public pages.

@@ -15,6 +15,7 @@ const { VERSION } = require('./public');
 const { safeUrl } = require('../views/html');
 
 const MAX_FAILS = 5;
+const TEMP_HOURS = 72; // how long a temporary password given by an administrator stays valid
 const LOCK_MINUTES = 15;
 
 // ---------- helpers ----------
@@ -82,6 +83,11 @@ function register(app) {
       const sent = body._csrf || req.headers['x-csrf-token'];
       if (!safeEqual(sent, req.session.csrf)) throw new HttpError(403, 'Your session expired or the form was out of date. Go back, reload the page and try again.');
     }
+    // Someone signed in with a temporary password must choose their own before doing anything else
+    if (user.mustChangePassword && !['/admin/change-password', '/admin/logout'].includes(req.path)) {
+      if (req.method === 'GET') return res.redirect('/admin/change-password');
+      throw new HttpError(403, 'Please choose your own password before continuing.');
+    }
   });
 
   // ----- sign in -----
@@ -119,8 +125,17 @@ function register(app) {
       }
       return fail('The email or password is not correct.');
     }
+    if (user.mustChangePassword && user.tempExpires && new Date(user.tempExpires) < new Date()) {
+      await C.audit(user, 'tried to sign in with an expired temporary password', user.email, req.ip);
+      return fail('This temporary password has expired. Ask an administrator to give you a new one.');
+    }
     await col('users').updateOne({ _id: user._id }, { $set: { failedLogins: 0, lockUntil: null, lastLoginAt: new Date(), lastLoginIp: req.ip } });
     await auth.createSession(res, user, req);
+    if (user.mustChangePassword) {
+      res.clearCookie('gsc_lt', { path: '/admin' });
+      await C.audit(user, 'signed in with a temporary password', user.email, req.ip);
+      return res.redirect('/admin/change-password');
+    }
     res.clearCookie('gsc_lt', { path: '/admin' });
     await C.audit(user, 'signed in', user.email, req.ip);
     const next = String(req.query.next || '');
@@ -648,18 +663,26 @@ function register(app) {
       if (supers <= 1) return again('This is the only active super admin. Create another super admin first.');
     }
     const set = { name: form.name, email: form.email, role, perms, access, active, updatedAt: new Date() };
-    if (b.password) { set.passwordHash = await auth.hashPassword(b.password); set.failedLogins = 0; set.lockUntil = null; }
+    if (b.password) {
+      set.passwordHash = await auth.hashPassword(b.password);
+      set.failedLogins = 0;
+      set.lockUntil = null;
+      // A password given by an administrator is temporary: the owner must replace it at first sign in
+      const ownAccount = existing && existing._id === me._id;
+      set.mustChangePassword = !ownAccount;
+      set.tempExpires = ownAccount ? null : new Date(Date.now() + TEMP_HOURS * 3600 * 1000);
+    }
     if (existing) {
       await col('users').updateOne({ _id: existing._id }, { $set: set });
       if (b.password || !active) await auth.destroyUserSessions(existing._id, existing._id === me._id ? req.session._id : undefined);
-      await C.audit(me, 'updated user account', form.email, b.password ? 'password changed' : '');
-      setFlash(res, 'ok', 'User saved.');
+      await C.audit(me, b.password && existing._id !== me._id ? 'reset the password of' : 'updated user account', form.email, b.password && existing._id !== me._id ? 'temporary password issued' : b.password ? 'password changed' : '');
+      setFlash(res, 'ok', b.password && existing._id !== me._id ? `User saved. Give ${form.name} the temporary password privately. It works once, for ${TEMP_HOURS} hours, and they must then choose their own.` : 'User saved.');
       return res.redirect('/admin/users/' + existing._id);
     }
     const doc = { _id: C.newId(), ...set, createdAt: new Date(), createdBy: me.name };
     await col('users').insertOne(doc);
     await C.audit(me, 'created user account', form.email, role);
-    setFlash(res, 'ok', 'User created. Share the temporary password with them privately.');
+    setFlash(res, 'ok', `User created. Give ${form.name} the temporary password privately. It is valid for ${TEMP_HOURS} hours, and they must choose their own password when they first sign in.`);
     res.redirect('/admin/users/' + doc._id);
   }
 
@@ -690,6 +713,27 @@ function register(app) {
     res.redirect('/admin/users');
   });
 
+  // ----- forced password change after a temporary password -----
+  app.get('/admin/change-password', async (req, res) => {
+    if (!req.user.mustChangePassword) return res.redirect('/admin/account');
+    res.html(A.changePasswordPage({ settings: await C.getSettings(), version: VERSION, csrf: req.session.csrf, user: req.user }));
+  });
+  app.post('/admin/change-password', async (req, res) => {
+    if (!req.user.mustChangePassword) return res.redirect('/admin/account');
+    const b = req.body;
+    const again = async (error) => res.html(A.changePasswordPage({ settings: await C.getSettings(), version: VERSION, csrf: req.session.csrf, user: req.user, error }), 400);
+    if (!rateLimit('pw:' + req.user._id, 10, 15 * 60 * 1000).ok) return again('Too many attempts. Try again later.');
+    const p = auth.passwordProblem(b.password, req.user);
+    if (p) return again(p);
+    if (b.password !== b.password2) return again('The two passwords do not match.');
+    if (await auth.verifyPassword(String(b.password), req.user.passwordHash)) return again('Choose a password different from the temporary one.');
+    await col('users').updateOne({ _id: req.user._id }, { $set: { passwordHash: await auth.hashPassword(b.password), mustChangePassword: false, tempExpires: null, updatedAt: new Date() } });
+    await auth.destroyUserSessions(req.user._id, req.session._id);
+    await C.audit(req.user, 'chose their own password', req.user.email);
+    setFlash(res, 'ok', 'Your password has been set. Welcome to the website dashboard.');
+    res.redirect('/admin');
+  });
+
   // ----- my account -----
   app.get('/admin/account', async (req, res) => res.html(A.accountPage(await ctxFor(req, res))));
   app.post('/admin/account', async (req, res) => {
@@ -700,7 +744,8 @@ function register(app) {
     const p = auth.passwordProblem(b.password, req.user);
     if (p) return res.html(A.accountPage(ctx, { error: p }), 400);
     if (b.password !== b.password2) return res.html(A.accountPage(ctx, { error: 'The two new passwords do not match.' }), 400);
-    await col('users').updateOne({ _id: req.user._id }, { $set: { passwordHash: await auth.hashPassword(b.password), updatedAt: new Date() } });
+    if (await auth.verifyPassword(String(b.password), req.user.passwordHash)) return res.html(A.accountPage(ctx, { error: 'The new password must be different from the current one.' }), 400);
+    await col('users').updateOne({ _id: req.user._id }, { $set: { passwordHash: await auth.hashPassword(b.password), mustChangePassword: false, tempExpires: null, updatedAt: new Date() } });
     await auth.destroyUserSessions(req.user._id, req.session._id);
     await C.audit(req.user, 'changed their password', req.user.email);
     setFlash(res, 'ok', 'Password changed. Other devices have been signed out.');

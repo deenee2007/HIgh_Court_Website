@@ -3,6 +3,50 @@
   'use strict';
   var csrf = document.body.getAttribute('data-csrf') || '';
 
+  // Eye button on every password field to show or hide what was typed
+  function addEye(inp) {
+    if (inp.dataset.eye) return;
+    inp.dataset.eye = '1';
+    var group = document.createElement('div');
+    group.className = 'input-group';
+    inp.parentNode.insertBefore(group, inp);
+    group.appendChild(inp);
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'btn btn-outline-secondary';
+    btn.setAttribute('aria-label', 'Show password');
+    btn.setAttribute('aria-pressed', 'false');
+    btn.innerHTML = '<i class="far fa-eye" aria-hidden="true"></i>';
+    btn.addEventListener('click', function () {
+      var show = inp.type === 'password';
+      inp.type = show ? 'text' : 'password';
+      btn.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+      btn.setAttribute('aria-pressed', show ? 'true' : 'false');
+      btn.innerHTML = '<i class="far ' + (show ? 'fa-eye-slash' : 'fa-eye') + '" aria-hidden="true"></i>';
+      inp.focus();
+    });
+    group.appendChild(btn);
+  }
+  document.querySelectorAll('input[type="password"]').forEach(addEye);
+
+  // Strong temporary password generator (Users page)
+  document.querySelectorAll('[data-generate-password]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var inp = document.querySelector(btn.getAttribute('data-generate-password'));
+      var letters = 'ABCDEFGHJKMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz';
+      var digits = '23456789';
+      var all = letters + digits;
+      var pick = function (set) { var a = new Uint32Array(1); crypto.getRandomValues(a); return set[a[0] % set.length]; };
+      var out = [pick(letters), pick(letters), pick(digits), pick(digits)];
+      while (out.length < 14) out.push(pick(all));
+      for (var i = out.length - 1; i > 0; i--) { var a = new Uint32Array(1); crypto.getRandomValues(a); var j = a[0] % (i + 1); var t = out[i]; out[i] = out[j]; out[j] = t; }
+      inp.value = out.join('');
+      if (inp.type === 'password') { var eye = inp.parentNode.querySelector('button'); if (eye) eye.click(); else inp.type = 'text'; }
+      inp.select();
+      inp.dispatchEvent(new Event('input', { bubbles: true }));
+    });
+  });
+
   // Mobile sidebar
   var toggle = document.querySelector('[data-toggle-side]');
   if (toggle) toggle.addEventListener('click', function () { document.getElementById('adminSide').classList.toggle('open'); });
