@@ -12,7 +12,10 @@ const BS_CSS = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.
 const BS_JS = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js';
 const FA_CSS = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css';
 
-const bg = (url, shade = 0.85) => `background-image: linear-gradient(rgba(0,77,0,${shade}), rgba(0,77,0,${shade}))${url ? `, url('${String(img(url, 1920)).replace(/['()\\]/g, (c) => '\\' + c)}')` : ''};`;
+const bg = (url, shade = 0.85) => {
+  const top = Math.max(0.45, shade - 0.25);
+  return `background-image: linear-gradient(180deg, rgba(0,51,0,${top}) 0%, rgba(0,51,0,${shade}) 100%)${url ? `, url('${String(img(url, 1920)).replace(/['()\\]/g, (c) => '\\' + c)}')` : ''};`;
+};
 const photo = (url, cls, alt, w = 600, h, crop) => (url
   ? html`<img src="${img(url, w, h, crop)}" class="${cls}" alt="${alt}" loading="lazy">`
   : html`<div class="${cls} photo-placeholder" role="img" aria-label="${alt}"><i class="fas fa-user fa-3x"></i></div>`);
@@ -161,8 +164,8 @@ const empty = (text) => html`<div class="text-center text-muted py-5"><i class="
 
 // ---------- item cards (shared by section pages and home blocks) ----------
 function profileCards(section, items) {
-  return items.map((e) => html`<div class="col-md-6 col-lg-4 mb-4 d-flex justify-content-center" data-page-item>
-    <div class="card profile-card shadow-sm h-100 card-lift" style="width: 300px;">
+  return items.map((e) => html`<div class="col-6 col-lg-4 mb-4 d-flex justify-content-center">
+    <div class="card profile-card shadow-sm h-100 card-lift w-100" style="max-width: 320px;">
       <a href="${entryUrl(section, e)}">${photo(e.data.photo, 'card-img-top w-100', e.title, 600, 600, 'fill')}</a>
       <div class="card-body text-center d-flex flex-column">
         <h2 class="h6 designation">${e.data.designation || section.singular}</h2>
@@ -231,7 +234,7 @@ function articleCards(section, items) {
     <div class="card h-100 shadow-sm card-lift overflow-hidden">
       ${e.data.image ? html`<img src="${img(e.data.image, 700, 420, 'fill')}" class="card-img-top" style="height:220px;object-fit:cover" alt="" loading="lazy">` : html`<div class="photo-placeholder" style="height:160px"><i class="far fa-newspaper fa-3x"></i></div>`}
       <div class="card-body d-flex flex-column">
-        <div class="mb-2">${e.data.category ? html`<span class="badge bg-danger me-2">${e.data.category}</span>` : ''}${e.data.date ? html`<small class="text-muted">${formatDate(e.data.date)}</small>` : ''}</div>
+        <div class="mb-2">${e.data.category ? html`<span class="badge badge-category me-2">${e.data.category}</span>` : ''}${e.data.date ? html`<small class="text-muted">${formatDate(e.data.date)}</small>` : ''}</div>
         <h3 class="h5 card-title">${e.title}</h3>
         <p class="card-text text-muted">${e.data.summary || stripTags(e.data.body).slice(0, 160)}</p>
         <a href="${entryUrl(section, e)}" class="text-success fw-bold text-decoration-none mt-auto stretched-link">Read More &rarr;</a>
@@ -265,7 +268,7 @@ function albumCards(section, items) {
 
 function noticeList(items) {
   return html`<div class="list-group shadow-sm">${items.map((e) => html`<div class="list-group-item p-3" id="${e.slug}">
-    <span class="badge ${/urgent/i.test(e.data.label) ? 'bg-danger' : /adjourn/i.test(e.data.label) ? 'bg-warning text-dark' : 'bg-info text-dark'} me-2">${e.data.label || 'NOTICE'}</span>
+    <span class="badge ${/urgent/i.test(e.data.label) ? 'badge-urgent' : /adjourn/i.test(e.data.label) ? 'badge-gold' : 'badge-green'} me-2">${e.data.label || 'NOTICE'}</span>
     ${e.data.message || e.title}
     ${e.data.link ? html` <a href="${safeUrl(e.data.link)}" class="ms-2">More details</a>` : ''}
     <div class="small text-muted mt-1">Posted ${formatDate(e.publishedAt || e.createdAt, 'short')}${e.data.expires ? html`, valid until ${formatDate(e.data.expires, 'short')}` : ''}</div>
@@ -311,7 +314,7 @@ function cardsFor(section, items) {
 // ---------- home page blocks ----------
 function blockHero(b, ctx) {
   const d = b.data;
-  return html`<header id="home" class="hero-bg text-center text-white" style="${bg(d.background, 0.8)}">
+  return html`<header id="home" class="hero-bg text-center text-white" style="${bg(d.background, 0.78)}">
     <div class="container">
       ${d.kicker ? html`<h2 class="h3 fw-normal">${d.kicker}</h2>` : ''}
       <h1 class="court-title">${d.title || ctx.settings.siteName}</h1>
@@ -325,7 +328,7 @@ function blockHero(b, ctx) {
 
 function blockNotices(b, ctx, data) {
   if (!data.items.length) return '';
-  const item = (e) => html`<div class="ticker-item"><span class="badge ${/urgent/i.test(e.data.label) ? 'bg-danger' : /adjourn/i.test(e.data.label) ? 'bg-warning text-dark' : 'bg-info'} me-2">${e.data.label || 'NOTICE'}</span>${e.data.link ? html`<a href="${safeUrl(e.data.link)}">${e.data.message || e.title}</a>` : e.data.message || e.title}</div>`;
+  const item = (e) => html`<div class="ticker-item"><span class="badge ${/urgent/i.test(e.data.label) ? 'badge-urgent' : /adjourn/i.test(e.data.label) ? 'badge-gold' : 'badge-green'} me-2">${e.data.label || 'NOTICE'}</span>${e.data.link ? html`<a href="${safeUrl(e.data.link)}">${e.data.message || e.title}</a>` : e.data.message || e.title}</div>`;
   return html`<div class="ticker-wrapper shadow-sm" role="region" aria-label="Notices"><div class="ticker-content">${data.items.map(item)}</div></div>`;
 }
 
@@ -368,10 +371,9 @@ function blockPromo(b) {
 
 function centeredHeading(d, fallback) {
   return html`<div class="section-heading-center">
-    ${d.kicker ? html`<div class="kicker">${d.kicker}</div>` : ''}
-    <h2 class="display-6 fw-bold">${d.heading || fallback}</h2>
-    ${d.intro ? html`<p class="text-muted">${d.intro}</p>` : ''}
-    <div class="bar"></div></div>`;
+    ${d.kicker ? html`<span class="section-kicker">${d.kicker}</span>` : ''}
+    <h2 class="section-title">${d.heading || fallback}</h2>
+    ${d.intro ? html`<p class="section-intro">${d.intro}</p>` : ''}</div>`;
 }
 
 function blockSection(b, ctx, data) {
@@ -384,24 +386,17 @@ function blockSection(b, ctx, data) {
   switch (section.layout) {
     case 'profiles':
       return html`<section id="${id}" class="container py-5">
-        <h2 class="section-title">${d.heading || section.name}</h2>
-        ${items.length ? html`<div class="paged-grid" data-per-page="3">
-          <div class="row justify-content-center">${profileCards(section, items)}</div>
-          <div class="text-center mt-2 pager-controls">
-            <button type="button" class="btn btn-outline-success" data-pager="prev">Previous</button>
-            <span class="fw-bold mx-3 text-success" data-pager="label"></span>
-            <button type="button" class="btn btn-success" data-pager="next">Next</button>
-          </div></div>` : empty('Nothing has been added yet.')}
+        ${centeredHeading(d, section.name)}
+        ${items.length ? html`<div class="row justify-content-center">${profileCards(section, items)}</div>` : empty('Nothing has been added yet.')}
         ${more}
       </section>`;
     case 'honours':
       return html`<section id="${id}" class="py-5 bg-light"><div class="container">
-        ${section.display === 'portrait' ? html`<div class="text-center mb-5"><h2 class="h3 fw-bold text-uppercase" style="color:var(--court-green);">${d.heading || section.name}</h2>${d.intro ? html`<p class="text-muted">${d.intro}</p>` : ''}<div class="mx-auto mb-3" style="width:50px;height:3px;background:var(--court-gold);"></div></div>` : centeredHeading(d, section.name)}
+        ${centeredHeading(d, section.name)}
         ${honoursList(section, items)}${more}</div></section>`;
     case 'departments':
       return html`<section id="${id}" class="bg-light py-5"><div class="container">
-        <h2 class="title-underlined text-center">${d.heading || section.name}</h2>
-        ${d.intro ? html`<p class="text-center text-muted mb-5">${d.intro}</p>` : ''}
+        ${centeredHeading(d, section.name)}
         <div class="row g-4">${departmentCards(section, items)}</div>${more}</div></section>`;
     case 'gallery': {
       const pics = [];
@@ -410,8 +405,8 @@ function blockSection(b, ctx, data) {
       const tile = (p, h) => html`<a class="gallery-item" style="height:${h}px" href="${entryUrl(section, p.album)}">
         <img src="${img(p.url, 900, h * 2, 'fill')}" alt="${p.caption || p.album.title}" loading="lazy"><span class="gallery-overlay">${p.caption || p.album.title}</span></a>`;
       return html`<section id="${id}" class="py-5 bg-white"><div class="container">
-        <div class="row align-items-center mb-5">
-          <div class="col-lg-8">${d.kicker ? html`<h3 class="h6 text-success fw-bold text-uppercase">${d.kicker}</h3>` : ''}<h2 class="display-6 fw-bold">${d.heading || section.name}</h2>${d.intro ? html`<p class="text-muted">${d.intro}</p>` : ''}</div>
+        <div class="row align-items-end mb-5 g-3">
+          <div class="col-lg-8">${d.kicker ? html`<span class="section-kicker">${d.kicker}</span>` : ''}<h2 class="section-title mb-3">${d.heading || section.name}</h2>${d.intro ? html`<p class="section-intro mb-0">${d.intro}</p>` : ''}</div>
           <div class="col-lg-4 text-lg-end"><a href="/${section.slug}" class="btn btn-outline-success btn-lg px-4 rounded-pill">${d.buttonLabel || 'View Full Gallery'} <i class="fas fa-arrow-right ms-2"></i></a></div>
         </div>
         ${top.length ? html`<div class="row g-3">
@@ -430,7 +425,7 @@ function blockSection(b, ctx, data) {
       return html`<section id="${id}" class="py-5"><div class="container"><h2 class="section-title">${d.heading || section.name}</h2>${items.length ? noticeList(items) : empty('There are no current notices.')}${more}</div></section>`;
     default:
       return html`<section id="${id}" class="bg-white py-5"><div class="container">
-        <h2 class="section-title">${d.heading || section.name}</h2>${d.intro ? html`<p class="text-muted mb-4">${d.intro}</p>` : ''}
+        ${centeredHeading(d, section.name)}
         <div class="row g-4">${cardsFor(section, items)}</div>${items.length ? '' : empty('Nothing has been added yet.')}${more}</div></section>`;
   }
 }
@@ -440,7 +435,7 @@ function blockContact(b, ctx) {
   const s = ctx.settings;
   const flash = ctx.query && ctx.query.sent ? html`<div class="alert alert-success">Thank you. Your message has been received.</div>` : ctx.query && ctx.query.error ? html`<div class="alert alert-danger">${ctx.query.error === 'rate' ? 'Too many messages were sent from your connection. Please try again later.' : 'Please fill in your name, a valid email address and your message.'}</div>` : '';
   return html`<section id="contact" class="section-padding bg-light"><div class="container">
-    <div class="text-center mb-5"><h2 class="section-title d-inline-block">${d.heading || 'Contact Us'}</h2>${d.intro ? html`<p class="text-muted mt-1">${d.intro}</p>` : ''}</div>
+    ${centeredHeading({ heading: d.heading, intro: d.intro }, 'Contact Us')}
     <div class="row g-4">
       <div class="${d.showForm ? 'col-lg-4' : 'col-12'}"><div class="contact-card h-100">
         <h3 class="h4 color-primary mb-4">Contact Information</h3>
@@ -603,7 +598,7 @@ function departmentDetail(ctx, section, e) {
   const d = e.data;
   return html`<header class="page-hero dept-hero text-center" style="${bg(d.banner || section.banner || ctx.settings.pageBanner, 0.85)}">
       <div class="container">
-        ${d.icon ? html`<i class="${d.icon} fa-4x mb-4" style="color:#28a745"></i>` : ''}
+        ${d.icon ? html`<i class="${d.icon} fa-3x mb-4" style="color:var(--court-gold)" aria-hidden="true"></i>` : ''}
         <h1 class="display-5 fw-bold">${d.heading || e.title}</h1>
         ${d.tagline ? html`<p class="lead mb-0">${d.tagline}</p>` : ''}
       </div></header>

@@ -132,7 +132,7 @@ function serveStatic(prefixes, dir) {
     const ext = path.extname(file).toLowerCase();
     res.setHeader('Content-Type', MIME[ext] || 'application/octet-stream');
     res.setHeader('ETag', etag);
-    res.setHeader('Cache-Control', req.path.startsWith('/uploads/') || req.path.startsWith('/assets/') ? 'public, max-age=604800' : 'public, max-age=3600');
+    res.setHeader('Cache-Control', req.path.startsWith('/uploads/') || req.path.startsWith('/assets/') || req.path.startsWith('/fonts/') ? 'public, max-age=604800' : 'public, max-age=3600');
     if (ext === '.svg') res.setHeader('Content-Security-Policy', "script-src 'none'");
     if (req.headers['if-none-match'] === etag) { res.statusCode = 304; res.end(); return true; }
     res.setHeader('Content-Length', st.size);
